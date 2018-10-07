@@ -70,14 +70,20 @@ input[type=password] {
         width: 90%;
         margin: 0;
     }
-    .welcome {
+    img,h1 {
+        display: none;
+    }
+    .welcome, {
         margin-left: 50px;
         width: 50%;
     }
 }
 
 @media screen and (max-width: 812px) {
-    .welcome {
+    .welcome, {
         width: 60%;
+    }
+    img,h1 {
+        display: none;
     }
 } 
