@@ -1,15 +1,26 @@
-/* general body */
+    /* general body */
+    
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
 
 body {
-    background: rgba(0, 0, 0, .7);
+    background: rgba(0, 0, 0, 0.8);
+    background-image: url(../images/smb.png);
+    background-blend-mode: color;
+    animation: animatedBackground 30s linear infinite;
 }
 
 /*
 
-Main navigation
 
 */
-
+    
 nav {
     width: 100%;
     background: #0A0908;
@@ -66,4 +77,60 @@ nav ul li a.active {
 .logohead {
     color: ivory;
     display: inline;
+}
+/* ::content */
+
+.welcome {
+    color: honeydew;
+    margin: 50px 250px;
+    padding: 10px 30px;
+    overflow: hidden;
+    width: 60%
+}
+
+.welcome h2,.bigcontainer h2,
+.welcome a {
+    padding: 5px 0px;
+}
+
+.welcome p ,{
+    font-size: 1.2em;
+}
+
+.start input {
+    background-color: #292D28;
+}
+
+input[type=submit] {
+    margin-top: 10px;
+    background-color: #0D89C6;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+ @media screen and (max-width: 1024px) {
+    .welcome {
+        width: 70%;
+        margin-left: 100px;
+    }
+    .welcome #about {
+        padding: 0 !important;
+    }
+}
+
+@media screen and (max-width: 812px) {
+    .welcome {
+        margin-left: 40px;
+    }
+    .welcome #about {
+        padding: 0 !important;
+    }
+} 
+
+.welcome #about {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    color: black;
+    padding: 0 2px 10px 10px;
 }
