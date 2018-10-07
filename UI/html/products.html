@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
     <link rel="stylesheet" type="text/css" href="../static/css/products.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/modal.css">
 </head>
 
 <body>
@@ -27,7 +28,14 @@
             <input type="submit" value="Search">
         </form>
     </div>
-     <div class="welcome">
+    <div id="myModal" class="modal">
+        <div class="col-25"><label >Email Address</label></div>
+        <div class="col-75"><input type="text"  placeholder="email@example.com.."></div>
+        <div class="col-25"><label >Password</label></div>
+        <div class="col-75"><input type="password"  placeholder="*******"></div>
+        <a href="#"><input type="submit" class="green" value="Done"><br></a>
+    </div>
+    <div class="welcome">
         <ul>
             <li>Bbcool HC<br>
                 <div class="dets">
@@ -35,7 +43,7 @@
                     @ KSH 550
                 </div>
             </li>
-            <a href="#"><input type="submit" value="AddtoCart"><br></a>
+            <a href="#"><input id="myBtn" type="submit" value="AddtoCart"><br></a>
             <li>Jamaa CTN<br>
                 <div class="dets">
     
