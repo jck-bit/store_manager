@@ -35,12 +35,17 @@
         <div class="col-75"><input type="text"  placeholder="i.e 1,2,3 ..."></div>
         <a href="#"><input type="submit" class="green" value="Done"><br></a>
     </div>
+    <div id="dets2" class="modal">
+        <h2>Product Name</h2>
+        <p>Stock: num</p>
+        <p>Price: KSH (value)</p>
+    </div>
     <div class="welcome">
         <ul>
             <li>Bbcool HC<br>
                 <div class="dets">
-    
-                    @ KSH 550
+                    @ KSH 550<br>
+                    <a href="#" onclick="dts()" >Details</a>
                 </div>
             </li>
             <a href="#"><input id="myBtn" type="submit" value="AddtoCart"><br></a>
@@ -50,7 +55,7 @@
                     @ KSH 1350
                 </div>
             </li>
-            <a href="#" onclick="adc()"><input type="submit" value="AddtoCart"><br></a>
+            <a href="#"  onclick="adc()"><input type="submit" value="AddtoCart"><br></a>
             <li>Zenta CTN<br>
                 <div class="dets">
                     @ KSH 1000
@@ -206,6 +211,7 @@
         </footer>
 
     <script type="text/javascript" src="../static/js/script.js"></script>
+    <script type="text/javascript" src="../static/js/dts.js"></script>
 </body>
 
 </html>
