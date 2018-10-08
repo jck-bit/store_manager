@@ -64,6 +64,7 @@ input[type=file] {
     cursor: pointer;
 }
 .pform label {
+    display: none;
     color: #0D89C6;
     padding-bottom: 20px;
 }

@@ -23,9 +23,9 @@
         </ul>
     </nav>
 
-     <div class="pcontainer">
-            <h3>Edit Profile</h3>
+     <div class="pcontainer" id="editp" style="display: none;">
             <div class="pform">
+                <h3>Edit Profile</h3>
                 <div class="col-75"> <label >User Name</label></div>
                 <div class="col-75"><input type="text" name="" placeholder="athena-kay" ></input></div>
                 <div class="col-75"><label >Email</label></div>
@@ -41,14 +41,14 @@
                 <div class="col-75"> <label >Change Profile Picture</label></div>
                 <input placeholder="choose file" type="file" />
             </div>
-            <div class="absolute"><input onclick="updateprof()" type="submit" value="Update Profile"></div>
+            <div class="absolute"><input class="update" type="submit" value="Update Profile"></div>
         </div>
     </div>
     <div class="pcontainer">
         <ul>
             <li><a href="#">Carts</a></li>
             <li><a href="attendant-sales.html">Sales</a></li>
-            <li><a href="#">EditProfile</a></li>
+            <li><a href="#" onclick="editf()" >EditProfile</a></li>
         </ul>
         <div class="photo">
             <img src="../static/images/athena.jpg" alt="+athena">
@@ -82,7 +82,7 @@
 
     </footer>
 
-    <script type="text/javascript" src="../static/js/script.js"></script>
+    <script type="text/javascript" src="../static/js/t.js"></script>
 </body>
 
 </html>
