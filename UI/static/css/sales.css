@@ -1,0 +1,24 @@
+.sales-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin: 50px 150px;
+    padding: 10px 30px;
+    overflow: hidden;
+    width: 75%;
+    font-size: 1.1em;
+    color: #550527;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    color: rgb(29, 42, 49);
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: cadetblue;
+}
