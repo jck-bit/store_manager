@@ -39,3 +39,17 @@ h1 {
 .del input[type=submit]{
 	background-color: #CF5C3F !important;
 }
+@media screen and (max-width: 1024px) {
+    .pcontainer {
+        width: 60%;
+        margin-left:40px;
+        padding: 4px;
+    }
+}
+
+@media screen and (max-width: 812px) {
+    .pcontainer {
+        margin-left: 40px;
+        width: 70%;
+    }
+} 
