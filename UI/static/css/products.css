@@ -32,13 +32,8 @@
     color: #fff;
     float: right;
     padding: 15px;
-    border-radius-top-right: 5px;
-    -moz-border-radius-top-right: 5px;
-    -webkit-border-radius-top-right: 5px;
-    border-radius-bottom-right: 5px;
-    -moz-border-radius-bottom-right: 5px;
-    -webkit-border-radius-bottom-right: 5px;
-        cursor:pointer;
+    border-radius: 5px;
+    cursor:pointer;
 }
 
 .welcome {
@@ -46,10 +41,6 @@
     border-radius: 4px;
 }
 ul {
-    -moz-column-count: 3;
-    -moz-column-gap: 20px;
-    -webkit-column-count: 3;
-    -webkit-column-gap: 20px;
     column-count: 3;
     column-gap: 20px;
 }
@@ -95,6 +86,7 @@ ul {
     width: 60%;
     padding: 14px;
 }
+
 .search input[type="submit"]{
     padding: 6px;
 }
