@@ -57,3 +57,21 @@ h4 {
     padding-top: 10px;
     color: cadetblue;
 }
+
+ @media screen and (max-width: 1024px) {
+    .pcontainer {
+        width: 60%;
+        margin-left:40px;
+        padding: 4px;
+    }
+    .photo {
+        margin: 5px 5px;
+    }
+}
+
+@media screen and (max-width: 812px) {
+    .pcontainer {
+        margin-left: 40px;
+        width: 70%;
+    }
+} 
