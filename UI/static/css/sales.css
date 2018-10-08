@@ -22,3 +22,17 @@ th, td {
 tr:nth-child(even) {
     background-color: cadetblue;
 }
+ @media screen and (max-width: 1024px) {
+    .sales-container {
+        width: 60%;
+        margin-left:40px;
+        padding: 4px;
+    }
+}
+
+@media screen and (max-width: 812px) {
+    .sales-container {
+        margin-left: 40px;
+        width: 70%;
+    }
+} 
