@@ -5,6 +5,12 @@ function b_show() {
 function del() {
     alert('Product Deleted!');
 }
+function user_add() {
+    alert('Attendant Added!');
+}
+function user_add2() {
+    alert('Admin Added!');
+}
 // Get the modal
 let modal = document.getElementById('myModal');
 

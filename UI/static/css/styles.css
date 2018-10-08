@@ -138,9 +138,7 @@ input[type=submit] {
 /*
 foooter
 */
-footer {
-    bottom:0;
-}
+
 .footercentered{
     background-color: #292c2f;
     border-radius: 6px;

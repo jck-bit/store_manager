@@ -47,20 +47,20 @@ input[type=password] {
   width: 75%;
   margin-top: 6px;
 }
-
+footer {
+    left: 0;
+    bottom: 0;
+    position:fixed;
+}
 @media screen and (max-width: 1024px) {
-    .col-75 {
-        width: 90%;
-        margin: 0;
-    }
-    .welcome, {
-        margin-left: 50px;
-        width: 50%;
+    .welcome {
+        width: 40%;
+        margin-left: 70px;
     }
 }
 
 @media screen and (max-width: 812px) {
-    .welcome, {
-        width: 60%;
+    .welcome {
+        margin-left: 50px;
     }
 } 
