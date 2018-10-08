@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
     <link rel="stylesheet" type="text/css" href="../static/css/profile.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/forms.css">
 </head>
 
 <body>
@@ -22,6 +23,27 @@
         </ul>
     </nav>
 
+     <div class="pcontainer">
+            <h3>Edit Profile</h3>
+            <div class="pform">
+                <div class="col-75"> <label >User Name</label></div>
+                <div class="col-75"><input type="text" name="" placeholder="athena-kay" ></input></div>
+                <div class="col-75"><label >Email</label></div>
+                <div class="col-75"><input type="text" name="" placeholder="athena.kay@gmail.com" ></input></div>
+                <div class="col-75"><label >Old Password</label></div>
+                <div class="col-75"> <input type="password" name="" placeholder="****" ></input></div>
+                <div class="col-75"><label >New Password</label></div>
+                <div class="col-75"> <input type="password" name="" placeholder="****" ></input></div>
+                <div class="col-75"><label >Confirm Password</label></div>
+                <div class="col-75"><input type="password"  placeholder="*******"></div>
+                <div class="col-75"> <label >Telephone</label></div>
+                <div class="col-75"><input type="text" name="" placeholder="0703 xxx xxx" ></input></div>
+                <div class="col-75"> <label >Change Profile Picture</label></div>
+                <input placeholder="choose file" type="file" />
+            </div>
+            <div class="absolute"><input onclick="updateprof()" type="submit" value="Update Profile"></div>
+        </div>
+    </div>
     <div class="pcontainer">
         <ul>
             <li><a href="#">Carts</a></li>

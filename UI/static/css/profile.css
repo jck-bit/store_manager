@@ -57,6 +57,16 @@ h4 {
     padding-top: 10px;
     color: cadetblue;
 }
+input[type=file] {
+    
+    background-color: gainsboro;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.pform label {
+    color: #0D89C6;
+    padding-bottom: 20px;
+}
 
  @media screen and (max-width: 1024px) {
     .pcontainer {
