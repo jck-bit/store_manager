@@ -18,7 +18,6 @@ function user_add2() {
 let modal = document.getElementById('addtocart');
 let mod2 = document.getElementById('details');
 
-// Get the button that opens the modal
 let btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
