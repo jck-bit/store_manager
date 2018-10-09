@@ -29,163 +29,187 @@
             <input type="submit" value="Search">
         </form>
     </div>
-    <div id="myModal" class="modal">
+    <div id="addtocart" class="modal" style="display:none">
         <div class="col-25"><label >Cart Name</label></div>
         <div class="col-75"><input type="text"  placeholder="i.e name of buyer ..."></div>
         <div class="col-75"><label >Number of items</label></div>
         <div class="col-75"><input type="text"  placeholder="i.e 1,2,3 ..."></div>
-        <a href="#"><input type="submit" class="green" value="Done"><br></a>
+        <a href="#" ><input class="added-to-cart" type="submit" value="Done"><br></a>
     </div>
-    <div id="dets2" class="modal">
+    <div id="details" class="modal" style="display:none">
         <h2>Product Name</h2>
         <p>Stock: num</p>
         <p>Price: KSH (value)</p>
+        <a href="#" ><input class="viewed" type="submit" value="OK"><br></a>
     </div>
     <div class="welcome">
+        <h1 style="color: lightseagreen" >Available Products</h1>
         <ul>
             <li>Bbcool HC<br>
                 <div class="dets">
                     @ KSH 550<br>
-                    <a href="#" onclick="dts()" >Details</a>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#"><input id="myBtn" type="submit" value="AddtoCart"><br></a>
             <li>Jamaa CTN<br>
                 <div class="dets">
-    
-                    @ KSH 1350
+                    @ KSH 1350<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#"  onclick="adc()"><input type="submit" value="AddtoCart"><br></a>
             <li>Zenta CTN<br>
                 <div class="dets">
-                    @ KSH 1000
+                    @ KSH 1000<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
             <li>Nescafe CTN<br>
                 <div class="dets">
-                    @ KSH 2850
+                    @ KSH 2850<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
             <li>Veroline CTN<br>
                 <div class="dets">
-                    @ KSH 3250
+                    @ KSH 3250<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
             <li>Kaluma CTN<br>
                 <div class="dets">
-                    @ KSH 2250
+                    @ KSH 2250<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
             <li>Colgate 15g <br>
                 <div class="dets">
-                    @ KSH 250
+                    @ KSH 250<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
             <li>Colgate 35g <br>
                 <div class="dets">
-                    @ KSH 500
+                    @ KSH 500<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
             <li>T-guard CTN<br>
                 <div class="dets">
-                    @ KSH 2250
+                    @ KSH 2250<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
             <li>Bbcool HC<br>
                 <div class="dets">
-                    @ KSH 550
+                    @ KSH 550<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
             <li>Bbcool HC<br>
                 <div class="dets">
-                    @ KSH 550
+                    @ KSH 550<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
             <li>Zenta CTN<br>
                 <div class="dets">
-                    @ KSH 1000
+                    @ KSH 1000<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
             <li>Nescafe CTN<br>
                 <div class="dets">
-                    @ KSH 2850
+                    @ KSH 2850<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
             <li>Veroline CTN<br>
                 <div class="dets">
-                    @ KSH 3250
+                    @ KSH 3250<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
             <li>Kaluma CTN<br>
                 <div class="dets">
-                    @ KSH 2250
+                    @ KSH 2250<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
             <li>Veroline CTN<br>
                 <div class="dets">
-                    @ KSH 3250
+                    @ KSH 3250<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
             <li>Kaluma CTN<br>
                 <div class="dets">
-                    @ KSH 2250
+                    @ KSH 2250<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
             <li>Colgate 15g <br>
                 <div class="dets">
-                    @ KSH 250
+                    @ KSH 250<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
             <li>Bbcool HC<br>
                 <div class="dets">
-                    @ KSH 550
+                    @ KSH 550<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
             <li>Bbcool HC<br>
                 <div class="dets">
-                    @ KSH 550
+                    @ KSH 550<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
             <li>Zenta CTN<br>
                 <div class="dets">
-                    @ KSH 1000
+                    @ KSH 1000<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
             <li>T-guard CTN<br>
                 <div class="dets">
-                    @ KSH 2250
+                    @ KSH 2250<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
             <li>Bbcool HC<br>
                 <div class="dets">
-                    @ KSH 550
+                    @ KSH 550<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
             <li>Bbcool HC<br>
                 <div class="dets">
-                    @ KSH 550
+                    @ KSH 550<br>
+                    <a href="#" onclick="details()" >Details</a>
                 </div>
             </li>
             <a href="#" onclick="adc()"><input type="submit" id="myBtn" value="AddtoCart"><br></a>
@@ -212,7 +236,6 @@
         </footer>
 
     <script type="text/javascript" src="../static/js/script.js"></script>
-    <script type="text/javascript" src="../static/js/dts.js"></script>
 </body>
 
 </html>

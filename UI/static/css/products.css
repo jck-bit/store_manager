@@ -1,15 +1,16 @@
 .search
 {
     border: 2px solid #CF5C3F;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
+    border-radius: 12px;
     margin: 50px  250px;
     padding: 0;
     overflow: hidden;
     width: 60%
 }
-
+.welcome a {
+    text-decoration: none !important;
+    padding-top: 4px;
+}
 .search input[type="text"]
 {
     border: 0px;
@@ -32,7 +33,7 @@
     color: #fff;
     float: right;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor:pointer;
 }
 
