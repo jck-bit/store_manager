@@ -80,6 +80,18 @@ nav ul li a.active {
 }
 /* ::content */
 
+.helper {
+    color: honeydew;
+    width: 40%;
+    margin-top: 50px;
+    margin-left: 80px;
+    float: left;
+
+}
+.helper h2,.helper a {
+    padding: 5px 0px;
+}
+
 .welcome {
     color: honeydew;
     margin: 50px 250px;
@@ -87,7 +99,15 @@ nav ul li a.active {
     overflow: hidden;
     width: 60%
 }
-
+.homelogin {
+    width: 25%;
+    margin-top: 50px;
+    float: right;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    padding: 18px;
+    margin-right: 80px;
+}
 .welcome h2,.bigcontainer h2,
 .welcome a {
     padding: 5px 0px;
