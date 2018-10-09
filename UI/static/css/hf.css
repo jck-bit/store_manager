@@ -1,3 +1,21 @@
+    /* general body */
+    
+    @keyframes animatedBackground {
+        from {
+            background-position: 0 0;
+        }
+        to {
+            background-position: 100% 0;
+        }
+    }
+    
+    body {
+        background: rgba(0, 0, 0, 0.8);
+        background-image: url(../images/smb.png);
+        background-blend-mode: color;
+        animation: animatedBackground 30s linear infinite;
+    }
+
 footer {
     left: 0;
     bottom: 0;
@@ -55,7 +73,7 @@ input[type=password] {
 }
 
 @media screen and (max-width: 812px) {
-    .welcome {
+    .welcome, {
         width: 60%;
     }
     h1 {

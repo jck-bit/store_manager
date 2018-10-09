@@ -1,3 +1,6 @@
+function sell() {
+    alert('Sold!');
+}
 let edit = document.getElementById('editp');
 let update = document.getElementsByClassName('update')[0];
 
