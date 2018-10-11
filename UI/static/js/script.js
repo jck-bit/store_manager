@@ -20,12 +20,10 @@ let mod2 = document.getElementById('details');
 
 let btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
 let done = document.getElementsByClassName("added-to-cart")[0];
 let don2 = document.getElementsByClassName("viewed")[0];
 let add = document.getElementById("add");
 
-// When the user clicks on the button, open the modal 
 btn.onclick = function() {
     modal.style.display = "block";
 }
@@ -35,16 +33,9 @@ function adc() {
 function details() {
     mod2.style.display = "block";
 }
-// When the user clicks on <span> (x), close the modal
 done.onclick = function() {
     modal.style.display = "none";
 }
 don2.onclick = function() {
     mod2.style.display = "none";
-}
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
 }

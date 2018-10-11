@@ -9,3 +9,6 @@ function editf() {
 update.onclick = function() {
     edit.style.display = "none";
 }
+function b_show() {
+    alert('Hello\nOur blog does not have posts yet.');
+}

@@ -25,7 +25,12 @@ li {
     color: black;
     width: 40%;
 }
-
+.btns {
+	display: inline-block !important;
+}
+.del input[type=submit]{
+	background-color: #CF5C3F !important;
+}
 @media screen and (max-width: 1024px) {
     .welcome {
         width: 40%;
