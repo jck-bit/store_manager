@@ -47,6 +47,10 @@ As an attendant:
 
 ![sml](https://user-images.githubusercontent.com/33450849/47312876-2fa1fc80-d646-11e8-920b-c8c5792a6350.png)
 
+* Responsive Products Page
+
+![smp](https://user-images.githubusercontent.com/33450849/47312949-59f3ba00-d646-11e8-921c-3b5d8354f46c.png)
+
 ## Authors
 
 * **Kelvin Mwangi** - *Initial work* - [kwanj-k](https://github.com/kwanj-k)
