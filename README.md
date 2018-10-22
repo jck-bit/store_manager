@@ -41,7 +41,7 @@ As an attendant:
  * Open index.html using your favorite browser
  * Go through the different UI links to view all features
 
-##ScreenShots
+## ScreenShots
 
 * Landing page
 
