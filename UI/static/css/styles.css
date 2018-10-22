@@ -1,13 +1,9 @@
 body {
-    background: rgba(0, 0, 0, 0.8);
-    background-image: url(../images/smb.png);
+    background:#E0E4E5;
     background-blend-mode: color;
 }
 
-/*
 
-
-*/
     
 nav {
     width: 100%;
@@ -69,15 +65,24 @@ nav ul li a.active {
 /* ::content */
 
 .helper {
-    color: honeydew;
+    color:#0A0908 ;
+    font-size: 1.2em;
     width: 40%;
-    margin-top: 50px;
-    margin-left: 80px;
+    margin-top: 150px;
+    margin-left: 200px;
     float: left;
 
 }
 .helper h2,.helper a {
     padding: 5px 0px;
+}
+
+.vl{
+    display: inline;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-left: 2px solid #0A0908;
+
 }
 
 .welcome {
@@ -89,12 +94,12 @@ nav ul li a.active {
 }
 .homelogin {
     width: 25%;
-    margin-top: 50px;
+    margin-top: 180px;
     float: right;
     border-radius: 4px;
     background-color: #f2f2f2;
-    padding: 18px;
-    margin-right: 80px;
+    padding: 30px;
+    margin-right: 120px;
 }
 .welcome h2,.bigcontainer h2,
 .welcome a {
@@ -106,6 +111,7 @@ nav ul li a.active {
 }
 
 .start input {
+    margin-top: 10px !important;
     background-color: #292D28;
 }
 
@@ -136,12 +142,7 @@ input[type=submit] {
     }
 } 
 
-.welcome #about {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    color: black;
-    padding: 0 2px 10px 10px;
-}
+
 
 /*
 foooter

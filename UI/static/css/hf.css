@@ -1,25 +1,14 @@
     /* general body */
     
-    @keyframes animatedBackground {
-        from {
-            background-position: 0 0;
-        }
-        to {
-            background-position: 100% 0;
-        }
-    }
-    
-    body {
-        background: rgba(0, 0, 0, 0.8);
-        background-image: url(../images/smb.png);
-        background-blend-mode: color;
-        animation: animatedBackground 30s linear infinite;
-    }
+body {
+    background:#E0E4E5;
+    background-blend-mode: color;
+}
 
 footer {
-    left: 0;
-    bottom: 0;
-    position:fixed;
+    float: left;
+    position: absolute;
+   bottom:-150px;
 }
 
 input[type=submit] {
