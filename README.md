@@ -41,6 +41,12 @@ As an attendant:
  * Open index.html using your favorite browser
  * Go through the different UI links to view all features
 
+##ScreenShots
+
+* Landing page
+
+![sml](https://user-images.githubusercontent.com/33450849/47312876-2fa1fc80-d646-11e8-920b-c8c5792a6350.png)
+
 ## Authors
 
 * **Kelvin Mwangi** - *Initial work* - [kwanj-k](https://github.com/kwanj-k)
