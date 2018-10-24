@@ -1,0 +1,35 @@
+.modal {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin: 50px 250px;
+    padding: 10px 30px;
+    overflow: hidden;
+    width: 25%;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+.col-25 {
+  width: 25%;
+  margin-top: 6px;
+}
+.col-75 {
+  width: 75%;
+  margin-top: 6px;
+}
+@media screen and (max-width: 1024px) {
+    .modal {
+        width: 70%;
+        margin-left: 100px;
+    }
+}
+@media screen and (max-width: 812px) {
+    .modal {
+        margin-left: 40px;
+    }
+} 

@@ -1,0 +1,89 @@
+/*
+forms
+*/
+
+
+.imgcontainer {
+    
+    margin: 50px 250px;
+    padding: 10px 30px;
+    overflow: hidden;
+    width: 60%;
+}
+
+h1 {
+    display: inline;
+    color: ivory;
+    font-size: 2em;
+}
+
+.img-form {
+    padding-top: 20px;
+    max-height: 50px;
+}
+
+.welcome {
+
+    margin-top: 40px; 
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    color: black;
+}
+input[type=submit] {
+    margin-top: 10px;
+    background-color: #0099C4;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.green input[type=submit]{
+    background-color: #0BC474 !important;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+input[type=password] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+/* Floating column for labels: 25% width */
+.col-25 {
+  width: 25%;
+  margin-top: 6px;
+}
+/* Floating column for inputs: 75% width */
+.col-75 {
+  width: 75%;
+  margin-top: 6px;
+}
+
+@media screen and (max-width: 1024px) {
+    .col-75 {
+        width: 90%;
+        margin: 0;
+    }
+    img,h1 {
+        display: none;
+    }
+    .welcome, {
+        margin-left: 50px;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 812px) {
+    .welcome, {
+        width: 60%;
+    }
+    img,h1 {
+        display: none;
+    }
+} 
