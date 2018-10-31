@@ -2,7 +2,7 @@
 
 function addAttendant(){
     //e.preventDefault();
-    let attendantUrl = 'http://127.0.0.1:5000/api/v2/attendant';
+    let attendantUrl = 'https://storemanager-v2.herokuapp.com/api/v2/attendant';
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
     let token = window.localStorage.getItem('token');
@@ -39,7 +39,7 @@ function addAttendant(){
 // Add admin
 
 function addAdmin(){
-    let adminUrl = 'http://127.0.0.1:5000/api/v2/admin';
+    let adminUrl = 'https://storemanager-v2.herokuapp.com/api/v2/admin';
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
     let token = window.localStorage.getItem('token');

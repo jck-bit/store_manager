@@ -16,7 +16,7 @@ function addProductsNum() {
 
 
 let ul = document.getElementById('products');
-let productsUrl = 'http://127.0.0.1:5000/api/v2/products';
+let productsUrl = 'https://storemanager-v2.herokuapp.com/api/v2/products';
 let token = window.localStorage.getItem('token');
 fetch(productsUrl, {
     method: 'GET',
@@ -68,7 +68,7 @@ if (addcart){
 }
 function cartAdd(){
     //e.preventDefault();
-    let cartUrl = `http://127.0.0.1:5000/api/v2/products/${this.product_id}`;
+    let cartUrl = `https://storemanager-v2.herokuapp.com/api/v2/products/${this.product_id}`;
     let number = document.getElementById('cnumber').value;
     if (number <= 0){
         let message = 'The number should atleast be one'

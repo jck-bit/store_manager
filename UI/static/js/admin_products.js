@@ -8,7 +8,7 @@ if (newProduct){
 
 function addProduct(e){
     e.preventDefault();
-    let productUrl = 'http://127.0.0.1:5000/api/v2/products';
+    let productUrl = 'https://storemanager-v2.herokuapp.com/api/v2/products';
     let name = document.getElementById('name').value;
     let inventory = document.getElementById('number').value;
     let price = document.getElementById('price').value;

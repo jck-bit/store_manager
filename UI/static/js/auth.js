@@ -8,7 +8,7 @@ if (reg){
 
 function addStore(e){
     e.preventDefault();
-    let registrationUrl = 'http://127.0.0.1:5000/api/v2/signup ';
+    let registrationUrl = 'https://storemanager-v2.herokuapp.com/api/v2/signup ';
     let name = document.getElementById('storename').value;
     let category = document.getElementById('category').value;
     let email = document.getElementById('email').value;
@@ -64,7 +64,7 @@ if (signin){
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
     //endpoint to sign in the user
-    let loginUrl = 'http://127.0.0.1:5000/api/v2/auth/login';
+    let loginUrl = 'https://storemanager-v2.herokuapp.com/api/v2/auth/login';
     fetch(loginUrl, {
         method: 'POST',
         headers: {
