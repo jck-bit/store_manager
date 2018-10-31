@@ -18,22 +18,25 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="stock.html" class="active">Stock</a></li>
             <li><a href="sales.html">Sales</a></li>
-            <li><a href="addattendant.html">AddAttendant</a></li>
+            <li><a href="addattendant.html">Add User</a></li>
             <li><a href="products.html">Attendant Site</a></li>
             <li><a href="./login.html" class="login">Logout</a></li>
         </ul>
     </nav>
-    <div id="addtocart" class="modal" style="display:none">
-        <div class="col-75"><label >Product Name</label></div>
-        <div class="col-75"><input type="text"  placeholder="name of product.."></div>
-        <div class="col-75"><label >Category</label></div>
-        <div class="col-75"><input type="text"  placeholder="Soap.."></div>
-        <div class="col-75"><label >Number_Of_Items</label></div>
-        <div class="col-75"><input type="text"  placeholder="20 Ctns"></div>
-        <div class="col-75"><label >Price KSH</label></div>
-        <div class="col-75"><input type="text"  placeholder="200"></div>
-        <a href="#" onclick="document.getElementById('addtocart').style.display='none'"><input   type="submit" value="Done"><br></a>
-    </div>
+    
+        <div id="addtocart" class="modal" style="display:none">
+            <form id="newproduct">
+                <div class="col-75"><label >Product Name</label></div>
+                <div class="col-75"><input id="name" type="text"  placeholder="name of product.."></div>
+                <div class="col-75"><label >Number_Of_Items</label></div>
+                <div class="col-75"><input id="number" type="text"  placeholder="20 "></div>
+                <div class="col-75"><label >Price KSH</label></div>
+                <div class="col-75"><input id="price" type="text"  placeholder="200"></div>
+                <p id="output"></p>
+                <a href="#" ><input   type="submit" value="Done"><br></a>
+            <form>
+        </div>
+    
     <div class="pcontainer">
         <h1>Available Products</h1>
         <a href="#" onclick="adc()"><input style="background-color: #0BC474" type="submit" value="AddProduct"></a>
@@ -52,45 +55,7 @@
                     <a href="#"  onclick="adc()"><input type="submit" value="Update"></a>
                     <a href="#" onclick="del()" class="del"><input type="submit" value="Delete"></a>
                 </div><br>
-                <li>
-                    <h4>Colgate 15g</h4>
-                    <div class="status">
-                        <h3>Category: ToothPaste</h3>
-                        <h3>Number: 15Ctns</h3>
-                        <h3>Min_Number: 2Ctns</h3>
-                        <h3>Price: @KSH 5600</h3>
-                    </div>
-                </li>
-                <div class="btns">
-                    <a href="#"  onclick="adc()"><input type="submit" value="Update"></a>
-                    <a href="#"  onclick="del()" class="del"><input type="submit" value="Delete"></a>
-                </div><br>
-                <li>
-                    <h4>Bella</h4>
-                    <div class="status">
-                        <h3>Category: Tissue</h3>
-                        <h3>Number: 50Bales</h3>
-                        <h3>Min_Number: 10Bales</h3>
-                        <h3>Price: @KSH 800</h3>
-                    </div>
-                </li>
-                <div class="btns">
-                    <a href="#"  onclick="adc()"><input type="submit" value="Update"></a>
-                    <a href="#"  onclick="del()" class="del"><input type="submit" value="Delete"></a>
-                </div><br>
-                <li>
-                    <h4>Zenta Bar</h4>
-                    <div class="status">
-                        <h3>Category: Saop</h3>
-                        <h3>Number: 50Ctns</h3>
-                        <h3>Min_Number: 5Ctns</h3>
-                        <h3>Price: @KSH 1000</h3>
-                    </div>
-                </li>
-                <div class="btns">
-                    <a href="#"  onclick="adc()"><input type="submit" value="Update"></a>
-                    <a href="#"  onclick="del()" class="del"><input type="submit" value="Delete"></a>
-                </div><br>
+                
             </ul>
         </div>
     </div>
@@ -104,6 +69,7 @@
         <p class="footer-company-name">Store Manager.inc &copy; 2018</p>
     </footer>
     <script type="text/javascript" src="../static/js/script.js"></script>
+    <script type="text/javascript" src="../static/js/admin_products.js"></script>
 </body>
 
 </html>

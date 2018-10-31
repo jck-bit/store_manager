@@ -17,7 +17,13 @@
     width: 67%;
     padding: 15px;
 }
-
+.modal input[type=number] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
 .search input[type="text"]:focus
 {
     outline: 0;
@@ -41,14 +47,19 @@
     background-color: white;
     border-radius: 4px;
 }
-ul {
-    column-count: 3;
-    column-gap: 20px;
-}
+
+
+.welcome ul {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+ 
+  }
 
 .welcome ul li {
     color: rgb(37, 37, 99);
-    padding: 8px 8px;
+    padding: 10px 8px;
     list-style: none;
     font-size: 1.2em;
 
