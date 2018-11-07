@@ -16,96 +16,27 @@
             </li>
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
-            <li><a href="carts.html" class="active" >Carts</a></li>
+            <li><a href="carts.html" class="active" >Cart</a></li>
             <li><a  href="profile.html">Your Profile</a></li>
             <li><a href="stock.html" class="cstore">Admin Site</a></li>
             <li><a href="./login.html" class="login">Logout</a></li>
         </ul>
     </nav>
     <div class="welcome">
-            <h1>Pending Carts</h1>
-           <ul>
-                <style>
-                    a{
-                        color: inherit;
-                        text-decoration: none;
-                        font-style: italic;
-                    }
-                </style>
-               <li>  <strong>Kelvin</strong><br>Attendant:Petrova<br> 
-                    <strong>Items:</strong>[Kaluma,superchunky]<br>
-                    <strong>Cost:    </strong>KSH: 585<br>
-               </li>
-               <div class="btns">
-                    <a href="#"  onclick="sell()"><input type="submit" value="sell"></a>
-                    <a href="#"  onclick="del()" class="del"><input type="submit" value="Delete"></a>
-                </div><br>
-               <li>  <strong>Kwanj</strong><br>Attendant:Kelvin<br>
-                    <strong>Items:</strong>[Kaluma,superchunky]<br>
-                    <strong>Cost:    </strong>KSH: 585<br>
-               </li>
-               <div class="btns">
-                    <a href="#"  onclick="sell()"><input type="submit" value="sell"></a>
-                    <a href="#"  onclick="del()" class="del"><input type="submit" value="Delete"></a>
-                </div><br>
-               
-               <li>  <strong>Bonnie</strong><br>Attendant:steph<br>
-                    <strong>Items:</strong>[Kaluma,superchunky]<br>
-                    <strong>Cost:    </strong>KSH: 585<br>
-               </li>
-               <div class="btns">
-                    <a href="#"  onclick="sell()"><input type="submit" value="sell"></a>
-                    <a href="#"  onclick="del()" class="del"><input type="submit" value="Delete"></a>
-                </div><br>
-
-               <li>  <strong>jade</strong><br>Attendant:pink<br>
-                    <strong>Items:</strong>[Kaluma,superchunky]<br>
-                    <strong>Cost:    </strong>KSH: 585<br>
-               </li>
-               <div class="btns">
-                    <a href="#"  onclick="sell()"><input type="submit" value="sell"></a>
-                    <a href="#"  onclick="del()" class="del"><input type="submit" value="Delete"></a>
-                </div><br>
-
-               <li>  <strong>Kelvin</strong><br>Attendant:Petrova<br>
-                    <strong>Items:</strong>[Kaluma,superchunky]<br>
-                    <strong>Cost:    </strong>KSH: 585<br>
-               </li>
-               
-               <div class="btns">
-                    <a href="#"  onclick="sell()"><input type="submit" value="sell"></a>
-                    <a href="#"  onclick="del()" class="del"><input type="submit" value="Delete"></a>
-                </div><br>
-               <li>  <strong>Kwanj</strong><br>Attendant:Kelvin<br>
-                    <strong>Items:</strong>[Kaluma,superchunky]<br>
-                    <strong>Cost:    </strong>KSH: 585<br>
-               </li>
-               
-               <div class="btns">
-                    <a href="#"  onclick="sell()"><input type="submit" value="sell"></a>
-                    <a href="#"  onclick="del()" class="del"><input type="submit" value="Delete"></a>
-                </div><br>
-
-               <li>  <strong>Bonnie</strong><br>Attendant:steph<br>
-                    <strong>Items:</strong>[Kaluma,superchunky]<br>
-                    <strong>Cost:    </strong>KSH: 585<br>
-               </li>
-               
-               <div class="btns">
-                    <a href="#"  onclick="sell()"><input type="submit" value="sell"></a>
-                    <a href="#"  onclick="del()" class="del"><input type="submit" value="Delete"></a>
-                </div><br>
-               <li>  <strong>jade</strong><br>Attendant:pink<br>
-                    <strong>Items:</strong>[Kaluma,superchunky]<br>
-                    <strong>Cost:    </strong>KSH: 585<br>
-               </li>
-               
-               <div class="btns">
-                    <a href="#"  onclick="sell()"><input type="submit" value="sell"></a>
-                    <a href="#"  onclick="del()" class="del"><input type="submit" value="Delete"></a>
-                </div><br>
-           </ul>
-       </div>
+        <a href="#" > <input type="submit" style="background-color: #0BC474" value="CheckOut"></a>  
+        <a href="#" onclick="addAdmin()"><input type="submit" value="DeleteAll"></a> 
+        <h2 id="total"></h2>
+        <ul id="cart">
+            <style>
+                a{
+                    color: inherit;
+                    text-decoration: none;
+                    font-style: italic;
+                }
+            </style>
+            
+        </ul>
+    </div>
     <footer class="footercentered">
         <p class="footer-company-motto">Sit back.StoreManger will handle it.</p>
         <p class="footer-links">
@@ -114,11 +45,7 @@
         </p>
         <p class="footer-company-name">Store Manager.inc &copy; 2018</p>
     </footer>
-
-    <script type="text/javascript" src="../static/js/t.js"></script>
-    <script type="text/javascript" src="../static/js/script.js"></script>
-
-
+    <script type="text/javascript" src="../static/js/cart.js"></script>
 </body>
 
 </html>
