@@ -1,11 +1,10 @@
 // get all available products
 
-function createNode(element) {
-    return document.createElement(element); 
-  }
-function append(parent, el) {
-    return parent.appendChild(el);
-  }
+function stashId(inid) {
+    sessionStorage.setItem('productid', inid)
+}
+ 
+ 
 let ul = document.getElementById('products');
 let productsUrl = 'https://storemanager-v2.herokuapp.com/api/v2/products';
 let token = window.localStorage.getItem('token');
@@ -28,22 +27,18 @@ fetch(productsUrl, {
         // if request is successful
         let products = data.products; // Get the results
         return products.map(function(product) { // Map through the results and for each run the code below
-        let li = createNode('li');
-        li.innerHTML = `${product.name} <br>`
-        let input = createNode('input');
-        input.type = "submit";
-        input.value = `AddtoCart`;
-        let a = createNode('a')
-        let div = createNode('div')
-        div.className = "dets";
-        div.innerHTML = `@ KSH ${product.price}<br>`;
-        let p = createNode('p');
-        p.innerHTML = `Inventory: ${product.inventory} <br>`;
-        append(ul, li);
-        append(li,div);
-        append(li,p);
-        append(a,input);
-        append(li, a);
+        ul.innerHTML += `
+                <li>
+                    ${product.name} <br>
+                    <div class="dets">
+                        @ KSH ${product.price}<br>    
+                    </div>
+                    <p>Inventory: ${product.inventory} <br></p>
+                    <a >
+                        <input onClick="stashId(${product.product_id});" type='submit' value='Addtocart'>
+                    </a>
+                </li>
+                `;
         })
         
     }else {

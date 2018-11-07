@@ -4,8 +4,8 @@ let signin = document.getElementById('login')
 if (signin){
     signin.addEventListener
     ('submit', login);
-    function login(e){
-
+    
+function login(e){
     e.preventDefault();
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;

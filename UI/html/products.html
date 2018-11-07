@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
     <link rel="stylesheet" type="text/css" href="../static/css/products.css">
     <link rel="stylesheet" type="text/css" href="../static/css/modal.css">
+    
 </head>
 
 <body>
@@ -23,11 +24,18 @@
             <li><a onClick="logout();" class="login">Logout</a></li>
         </ul>
     </nav>
-    
+    <form id="cartaddr">
+        <div id="number" class="modal" style="display:none;">
+            <div class="col-75"><label >Number of items</label></div>
+            <div class="col-75"><input id="cnumber" type="number"  placeholder="i.e 4"></div>
+            <p id="output2"></p>
+            <a  ><input type="submit" value="AddtoCart"><br></a>
+        </div>
+    </form>
     <div class="welcome" id="welcome">
         <h1 style="color: lightseagreen" >Available Products</h1>
         <p id="output"></p>
-        <ul id="products"></ul>
+        <ul onClick="addProductsNum();"id="products"></ul>
     </div>
     <footer class="footercentered">
         <p class="footer-company-motto">Sit back.StoreManger will handle it.</p>
@@ -38,6 +46,7 @@
         <p class="footer-company-name">Store Manager.inc &copy; 2018</p>
     </footer>
     <script type="text/javascript" src="../static/js/general_products.js"></script>
+    <script type="text/javascript" src="../static/js/addtocart.js"></script>
     <script type="text/javascript" src="../static/js/logout.js"></script>
 </body>
 
