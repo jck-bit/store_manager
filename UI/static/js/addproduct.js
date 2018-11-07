@@ -19,7 +19,7 @@ function addProduct(e){
         headers: {
             'Accept': 'application/json, text/plain, */*',
             'Content-type':'application/json',
-            'Authorization': 'Bearer '+ token
+            'Authorization': `Bearer ${token}`
         },
         body:JSON.stringify({"name":name,
                             "inventory":Number(inventory),
@@ -37,8 +37,8 @@ function addProduct(e){
                 // if request is successful
                 document.getElementById('output').style.color = 'green'
                 document.getElementById('output').innerHTML = data.message
-                setTimeout(function () {
-                    window.location.href = "stock.html";
+                setTimeout(() => {
+                    window.location.href = "products.html";
                  }, 2000)
             }
         })

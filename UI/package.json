@@ -1,0 +1,19 @@
+{
+  "name": "storemanager-ui",
+  "version": "1.0.0",
+  "description": "Javascript to consume the storemanager API",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "mocha": "^5.2.0",
+    "parcel-bundler": "^1.10.3"
+  },
+  "scripts": {
+    "start": "parcel html/*.html",
+    "test": "node_modules/mocha/bin/mocha ./tests"
+  },
+  "author": "kwanj-k",
+  "license": "ISC"
+}

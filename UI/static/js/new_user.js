@@ -6,7 +6,9 @@ function addAttendant(){
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
     let token = window.localStorage.getItem('token');
-
+    if (token === null){
+        window.location.href = "login.html";
+    }
     fetch(attendantUrl, {
         method: 'POST',
         headers: {
@@ -23,6 +25,7 @@ function addAttendant(){
                 // if request is unsuccessful
                 document.getElementById('output').style.color = 'red'
                 document.getElementById('output').innerHTML = data.message
+                return message
             }
             if (data.status === "Success!"){
                 // if request is successful
@@ -43,7 +46,10 @@ function addAdmin(){
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
     let token = window.localStorage.getItem('token');
-
+    console.log(token);
+    if (token === null){
+        window.location.href = "login.html";
+    }
     fetch(adminUrl, {
         method: 'POST',
         headers: {

@@ -1,28 +1,25 @@
+
+
 function b_show() {
     alert('Hello\nOur blog does not have posts yet.');
 }
 
 function del() {
-    alert('Product Deleted!');
+    alert('Product Devared!');
 }
 function sell() {
     alert('Sold!');
 }
-function user_add() {
-    alert('Attendant Added!');
-}
-function user_add2() {
-    alert('Admin Added!');
-}
+
 // Get the modal
-let modal = document.getElementById('addtocart');
-let mod2 = document.getElementById('details');
+const modal = document.getElementById('newproduct');
+const mod2 = document.getElementById('details');
 
-let btn = document.getElementById("myBtn");
+const btn = document.getElementById("myBtn");
 
-let done = document.getElementsByClassName("added-to-cart")[0];
-let don2 = document.getElementsByClassName("viewed")[0];
-let add = document.getElementById("add");
+const done = document.getElementsByClassName("added-to-cart")[0];
+const don2 = document.getElementsByClassName("viewed")[0];
+const add = document.getElementById("add");
 
 btn.onclick = function() {
     modal.style.display = "block";
@@ -33,9 +30,9 @@ function adc() {
 function details() {
     mod2.style.display = "block";
 }
-done.onclick = function() {
+done.onclick = () => {
     modal.style.display = "none";
-}
-don2.onclick = function() {
+};
+don2.onclick = () => {
     mod2.style.display = "none";
-}
+};

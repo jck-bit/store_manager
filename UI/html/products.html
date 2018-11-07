@@ -20,37 +20,25 @@
             <li><a href="carts.html" >Carts</a></li>
             <li><a  href="profile.html">Your Profile</a></li>
             <li><a href="stock.html" class="cstore">Admin Site</a></li>
-            <li><a href="./login.html" class="login">Logout</a></li>
+            <li><a onClick="logout();" class="login">Logout</a></li>
         </ul>
     </nav>
-    <div class="search">
-        <form class="search-form">
-            <input type="text" placeholder="Search for products..">
-            <input type="submit" value="Search">
-        </form>
-    </div>
-    <form  id="cartnum">
-        <div id="number" class="modal" style="display:none">
-            <div class="col-75"><label >Number of items</label></div>
-            <div class="col-75"><input id="cnumber" type="number"  placeholder="i.e 4"></div>
-            <a href="#" ><input class="added-to-cart" type="submit" value="AddtoCart"><br></a>
-        </div>
-    </form>
+    
     <div class="welcome" id="welcome">
         <h1 style="color: lightseagreen" >Available Products</h1>
         <p id="output"></p>
-        <ul onclick="addProductsNum()" id="products"></ul>
+        <ul id="products"></ul>
     </div>
     <footer class="footercentered">
         <p class="footer-company-motto">Sit back.StoreManger will handle it.</p>
         <p class="footer-links">
             <a href="index.html">Home</a> ·
-            <a id="bpopup" onclick="b_show()">Blog</a>   
+            <a href="#">Blog</a>   
         </p>
         <p class="footer-company-name">Store Manager.inc &copy; 2018</p>
     </footer>
-    <script type="text/javascript" src="../static/js/script.js"></script>
     <script type="text/javascript" src="../static/js/general_products.js"></script>
+    <script type="text/javascript" src="../static/js/logout.js"></script>
 </body>
 
 </html>
