@@ -1,3 +1,9 @@
+let number = document.getElementById('number');
+function addProductsNum(){
+    number.style.display = "block";
+    
+}
+
 // get the contents of my cart
 
 function stashId(inid) {
@@ -31,13 +37,13 @@ fetch(cartUrl, {
         return products.map(function(product) { // Map through the results and for each run the code below
         ul.innerHTML += `
                 <li> 
-                    <strong>Product :</strong> ${product.name}<br> 
+                    <strong>Product :</strong> ${product.product}<br> 
                     <strong>Number  :</strong> ${product.number_of_products}<br>
                     <strong>Cost    :</strong> KSH ${product.amount}<br>
                 </li>
                 <div class="btns">
-                    <a onClick="stashId(${product.entry_id});" ><input type="submit" value="Update"></a>
-                    <a onClick="stashId(${product.entry_id});" class="del"><input type="submit" value="Delete"></a>
+                    <a onClick="stashId(${product.entry_id}); addProductsNum();" ><input type="submit" value="Update"></a>
+                    <a onClick="stashId(${product.entry_id}); deleteOneProduct();" class="del"><input type="submit" value="Delete"></a>
                 </div><br>
                 `;
         })
