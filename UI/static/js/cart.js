@@ -24,7 +24,7 @@ fetch(cartUrl, {
 })
   .then((res) => res.json())
   .then((data) => {
-    if (data.status === 'Failed!'){
+    if (data.status === 'Failed!' ){
         // if request is unsuccessful
         document.getElementById('output').style.color = 'red'
         document.getElementById('output').innerHTML = data.message
@@ -48,8 +48,6 @@ fetch(cartUrl, {
                 `;
         })
         
-    }else {
-        window.location.href = "login.html";
     }
 
 }).catch((error) => {

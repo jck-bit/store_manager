@@ -31,8 +31,9 @@
         </div>
     </form>
     <div class="welcome">
-        <a href="#" > <input type="submit" style="background-color: #0BC474" value="CheckOut"></a>  
-        <a href="#" onclick="addAdmin()" class="del"><input type="submit" value="DeleteAll"></a> 
+        <a href="#" onclick="cartCheckOut();"> <input type="submit" style="background-color: #0BC474" value="CheckOut"></a>  
+        <a href="#" onclick="deleteEntireCart();" class="del"><input type="submit" value="DeleteAll"></a> 
+        <p id="output"></p>
         <h2 id="total"></h2>
         <ul id="cart">
             <style>

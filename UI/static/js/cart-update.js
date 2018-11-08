@@ -7,8 +7,8 @@ let cartAdd1 = document.getElementById('cartaddr');
 }
 
 //Checkout or sell an entire cart
-function cartCheckOut(e){
-    e.preventDefault();
+function cartCheckOut(){
+    //e.preventDefault();
     let cartUrl = `https://storemanager-v2.herokuapp.com/api/v2/cart`;
     let token = window.localStorage.getItem('token');
     console.log(cartUrl);
@@ -23,14 +23,15 @@ function cartCheckOut(e){
         .then((data) => {
             if (data.status === 'Failed!'){
                 // if request is unsuccessful
-                document.getElementById('output2').style.color = 'red'
-                document.getElementById('output2').innerHTML = data.message
+                document.getElementById('output').style.color = 'red'
+                document.getElementById('output').innerHTML = data.message
                 return message
             }
-            if (data.status === "Success!"){
+            if (data.status === "Sold!"){
                 // if request is successful
-                document.getElementById('output2').style.color = 'green'
-                document.getElementById('output2').innerHTML = data.message
+                message = 'Cart sold!'
+                document.getElementById('output').style.color = 'green'
+                document.getElementById('output').innerHTML = message
                 return message
             }
     
@@ -62,10 +63,10 @@ function deleteOneProduct(){
                 document.getElementById('output').innerHTML = data.message
                 return message
             }
-            if (data.status === "Success!"){
+            if (data.status === "Deleted!"){
                 // if request is successful
-                document.getElementById('output2').style.color = 'green'
-                document.getElementById('output2').innerHTML = data.message
+                document.getElementById('output').style.color = 'green'
+                document.getElementById('output').innerHTML = data.status
                 return message
             }
     
@@ -101,24 +102,22 @@ function cartProductUpdate(e){
                 // if request is unsuccessful
                 document.getElementById('output2').style.color = 'red'
                 document.getElementById('output2').innerHTML = data.message
-                return message
             }
-            if (data.status === "Success!"){
+            if (data.status === "Cart Updated"){
                 // if request is successful
                 document.getElementById('output2').style.color = 'green'
-                document.getElementById('output2').innerHTML = data.message
-                return message
+                document.getElementById('output2').innerHTML = data.status
+                
             }
     
         })
     }
 
 //Delete an entire cart
-function deleteEntireCart(e){
-    e.preventDefault();
+function deleteEntireCart(){
+    //e.preventDefault();
     let cartUrl = `https://storemanager-v2.herokuapp.com/api/v2/cart`;
     let token = window.localStorage.getItem('token');
-    console.log(cartUrl);
     fetch(cartUrl, {
         method: 'DELETE',
         headers: {
@@ -128,18 +127,17 @@ function deleteEntireCart(e){
         })
         .then((res) => res.json())
         .then((data) => {
+            console.log(data.status);
             if (data.status === 'Failed!'){
                 // if request is unsuccessful
                 document.getElementById('output').style.color = 'red'
                 document.getElementById('output').innerHTML = data.message
                 return message
             }
-            if (data.status === "Success!"){
+            if (data.status === "Cart Deleted!"){
                 // if request is successful
                 document.getElementById('output').style.color = 'green'
-                document.getElementById('output').innerHTML = data.message
-                return message
+                document.getElementById('output').innerHTML = data.status
             }
-    
         })
     }
