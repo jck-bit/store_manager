@@ -40,6 +40,8 @@ function addProduct(e){
                 setTimeout(() => {
                     window.location.href = "products.html";
                  }, 2000)
+            }else {
+                window.location.href = "login.html";
             }
         })
     }

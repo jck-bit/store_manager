@@ -6,6 +6,16 @@ h1 {
     font-style: italic;
     font-size: 0.7em;
 }
+.pcontainer input[type=number] {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+.pcontainer .col-75 {
+    padding: 8px;
+}
 .stock ul li {
     color: rgb(37, 37, 99);
     font-size: 1.3em;

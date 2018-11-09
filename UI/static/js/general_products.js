@@ -33,7 +33,7 @@ fetch(productsUrl, {
                     <div class="dets">
                         @ KSH ${product.price}<br>    
                     </div>
-                    <p>Inventory: ${product.inventory} <br></p>
+                    Inventory: ${product.inventory}<br>
                     <a >
                         <input onClick="stashId(${product.product_id});" type='submit' value='Addtocart'>
                     </a>

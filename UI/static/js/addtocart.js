@@ -45,6 +45,8 @@ function cartAdd(e){
                 document.getElementById('output2').style.color = 'green'
                 document.getElementById('output2').innerHTML = data.message
                 return message
+            }else {
+                window.location.href = "login.html";
             }
     
         })

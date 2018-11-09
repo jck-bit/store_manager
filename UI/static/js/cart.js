@@ -48,6 +48,8 @@ fetch(cartUrl, {
                 `;
         })
         
+    }else {
+        window.location.href = "login.html";
     }
 
 }).catch((error) => {
