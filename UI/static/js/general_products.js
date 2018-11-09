@@ -41,8 +41,6 @@ fetch(productsUrl, {
                 `;
         })
         
-    }else {
-        window.location.href = "login.html";
     }
 
 }).catch((error) => {

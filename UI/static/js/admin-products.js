@@ -76,6 +76,7 @@ fetch(productsUrl, {
         // if request is unsuccessful
         document.getElementById('output').style.color = 'red'
         document.getElementById('output').innerHTML = data.message
+        return message
     }
     if (data.status === "Success!"){
         // if request is successful
