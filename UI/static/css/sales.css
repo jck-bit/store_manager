@@ -20,7 +20,7 @@ th, td {
     padding: 8px;
 }
 tr:nth-child(even) {
-    background-color: cadetblue;
+    background-color: cadetblue !important;
 }
  @media screen and (max-width: 1024px) {
     .sales-container {

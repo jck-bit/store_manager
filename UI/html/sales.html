@@ -5,7 +5,7 @@
     <title>StoreManager</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
-    <link rel="stylesheet" type="text/css" href="../static/css/salesadmin.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/sales.css">
 </head>
 
 <body>
@@ -16,31 +16,31 @@
             </li>
             <li><a href="index.html">Home</a></li>
             <li><a href="stock.html" >Stock</a></li>
-            <li><a href="#" class="active">Sales</a></li>
-            <li><a href="addattendant.html" >Add User</a></li>
+            <li><a href="sales.html" class="active">Sales</a></li>
+            <li><a href="addattendant.html">Add User</a></li>
             <li><a href="products.html">Attendant Site</a></li>
             <li><a onclick="logout();" class="login">Logout</a></li>
         </ul>
     </nav>
-     <div class="welcome">
-         <h1>Attendant Sale Records</h1>
-        <ul>
-            <li> <strong>Kelvin</strong><br>Email:zeuskay@gmail.com </li>
-            <a href="sales2.html"><input type="submit" value="Details"><br></a>
-            <li> <strong>Athena</strong><br>Email:athenakay@gmail.com </li>
-            <a href="sales2.html"><input type="submit" value="Details"><br></a>
-            <li> <strong>Jay</strong><br>Email:jay@gmail.com </li>
-            <a href="sales2.html"><input type="submit" value="Details"><br></a>
-            <li> <strong>Ptah</strong><br>Email:ptah@gmail.com </li>
-            <a href="sales2.html"><input type="submit" value="Details"><br></a>
-            <li> <strong>Kwanj</strong><br>Email:zeuskay@gmail.com </li>
-            <a href="sales2.html"><input type="submit" value="Details"><br></a>
-            <li> <strong>Cuhi</strong><br>Email:cuhi@gmail.com </li>
-            <a href="sales2.html"><input type="submit" value="Details"><br></a>
-        
-        </ul>
+
+    <div class="sales-container">
+        <h2>Sale Record</h2>
+        <p id=></p>
+        <h3 id="total"></h3>
+        <div style="overflow-x:auto;">
+            <table id="tablecontents">
+                <tr>
+                    <th>Product</th>
+                    <th>Number</th>
+                    <th>Time Stamp</th>
+                    <th>Sold by</th>
+                    <th>Cost(KSH)</th>
+                </tr>
+            </table>
+        </div>
     </div>
-     <footer class="footercentered">
+
+    <footer class="footercentered">
         <p class="footer-company-motto">Sit back.StoreManger will handle it.</p>
         <p class="footer-links">
             <a href="index.html">Home</a> ·
@@ -48,8 +48,9 @@
         </p>
         <p class="footer-company-name">Store Manager.inc &copy; 2018</p>
     </footer>
-     <script type="text/javascript" src="../static/js/script.js"></script>
-     <script type="text/javascript" src="../static/js/logout.js"></script>
-</body>
+
+    <script type="text/javascript" src="../static/js/script.js"></script>
+    <script type="text/javascript" src="../static/js/all-sales.js"></script>
+    <script type="text/javascript" src="../static/js/logout.js"></script>
 </body>
 </html>
