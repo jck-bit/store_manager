@@ -1,35 +1,37 @@
 // Signup/Add a store
 
-let reg = document.getElementById('addStore')
-if (reg){
-    reg.addEventListener
-    ('submit', addStore);
-}
+// let reg = document.getElementById('addStore')
+// if (reg){
+//     reg.addEventListener
+//     ('submit', addStore);
+// }
+// let name = document.getElementById('storename').value;
+// let category = document.getElementById('category').value;
+// let email = document.getElementById('email').value;
+// let password = document.getElementById('password').value;
+// let confirmpassword = document.getElementById('confirmpassword').value;
 
-function addStore (e) {
-    e.preventDefault();
+// if (password !== confirmpassword){
+//     let message = 'The passwords do not mactch'
+//     document.getElementById('output').style.color = 'red'
+//     document.getElementById('output').innerHTML = message
+//     return message
+// }
+// data = {"name":name,
+//         "category":category,
+//         "email":email,
+//         "password":password}
+
+function addStore (data) {
+    //e.preventDefault();
     let registrationUrl = 'https://storemanager-v2.herokuapp.com/api/v2/signup ';
-    let name = document.getElementById('storename').value;
-    let category = document.getElementById('category').value;
-    let email = document.getElementById('email').value;
-    let password = document.getElementById('password').value;
-    let confirmpassword = document.getElementById('confirmpassword').value;
-    if (password !== confirmpassword){
-        let message = 'The passwords do not mactch'
-        document.getElementById('output').style.color = 'red'
-        document.getElementById('output').innerHTML = message
-        return message
-    }
     fetch(registrationUrl, {
         method: 'POST',
         headers: {
             'Accept': 'application/json, text/plain, */*',
             'Content-type':'application/json'
         },
-        body:JSON.stringify({"name":name,
-                            "category":category,
-                            "email":email,
-                            "password":password})
+        body:JSON.stringify(data)
         })
         .then((res) => res.json())
         .then((data) => {
@@ -47,5 +49,8 @@ function addStore (e) {
                  }, 2000)
             }
         })
-    }
 
+    }
+//module.exports =addStore;
+
+exports.addStore=addStore;

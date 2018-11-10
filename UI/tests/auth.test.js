@@ -1,31 +1,82 @@
 //Authentication tests
-//const addStore = require('../static/js/auth.js').addStore;
 const addStore  = require('../static/js/signup');
-
-
 let expect = require('chai').expect;
+const chai = require('chai');
+chai.should();
+const sinon = require('sinon');
+// //const sinonStubPromise = require('sinon-stub-promise');
 
- 
-let register_details = {
-  'name': 'mochastore',
-  'category':'chai',
-  'email': 'email@email.com',
-  'password': '123@abc',
-  'confirmpassword':'123@abc'
+// import sinonStubPromise from 'sinon-stub-promise';
+// //import sinon from 'sinon';
+// sinonStubPromise(sinon)
+
+
+// let stubedFetch = sinon.stub(process, 'fetch') 
+
+// window.fetch.returns(Promise.resolve(mockApiResponse()));
+
+// function mockApiResponse(body = {}) {
+//     return new window.Response(JSON.stringify(body), {
+//        status: 201,
+//        headers: { 'Content-type': 'application/json' }
+//     });
+// }
+
+
+// function jsonOk (body) {
+//     const mockResponse = new window.Response(JSON.stringify(body), {
+//       status: 201,
+//       headers: {
+//         'Content-type': 'application/json'
+//       }
+//     });
+  
+//     return Promise.resolve(mockResponse);
+//   }
+  
+// const MOCK_JSON = {
+//     'status' : 'Success!'
+//     };
+  
+
+
+const name ="storename";
+let category = 'category';
+let email = 'email@gmail.com';
+let password = 'password';
+
+reg_data = {
+    "name":name, 
+    "category":category,
+    "email":email,
+    "password":password
+
 };
- 
- 
 /**
 * - Create an account, login with details, and check if token comes
 */
- 
+ // let stub = sinon.stub(addStore, 'fetch'); //add stub
+    // stub.onCall(0).returns(jsonOk(MOCK_JSON));
+    // });
+    // beforeEach(()=>{
+    //     mockApiResponse();
+    // })
 describe('Create Account, Login and Check Token', () => {
-    it('should create a store', async () => {
-        //let result = await addStore(register_details);
-        //assert.equal(result,201);
-        let res = await addStore(register_details);
-        expect(res.status).to.equal(201);
-        //res.should.eventually.be.true;
-        //done();
+    beforeEach( () =>{
+        sinon
+        .stub(process, "addstore")
+        .yields(undefined,{},JSON.stringify({data:{status:"Success!"}}))
+    });
+
+    // afterEach(() => {
+    //     process.addStore.restore();  //remove stub
+    // });
+    
+    it('should create a store', done => {
+        addStore(reg_data)
+        .then( data => {
+            data.status.should.exist;
+            done();
+        })
     })
-});
+})

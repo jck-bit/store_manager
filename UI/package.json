@@ -8,11 +8,12 @@
     "chai": "^4.2.0",
     "chai-http": "^4.2.0",
     "mocha": "^5.2.0",
-    "parcel-bundler": "^1.10.3"
+    "parcel-bundler": "^1.10.3",
+    "sinon": "^7.1.1"
   },
   "scripts": {
     "start": "parcel html/*.html",
-    "test": "node_modules/mocha/bin/mocha ./tests"
+    "test": "node_modules/mocha/bin/mocha  ./tests "
   },
   "author": "kwanj-k",
   "license": "ISC"
