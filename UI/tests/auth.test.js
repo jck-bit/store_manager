@@ -1,43 +1,10 @@
 //Authentication tests
-const addStore  = require('../static/js/signup');
+const AddStore  = require('../static/js/signup').addStore;
 let expect = require('chai').expect;
 const chai = require('chai');
 chai.should();
 const sinon = require('sinon');
-// //const sinonStubPromise = require('sinon-stub-promise');
-
-// import sinonStubPromise from 'sinon-stub-promise';
-// //import sinon from 'sinon';
-// sinonStubPromise(sinon)
-
-
-// let stubedFetch = sinon.stub(process, 'fetch') 
-
-// window.fetch.returns(Promise.resolve(mockApiResponse()));
-
-// function mockApiResponse(body = {}) {
-//     return new window.Response(JSON.stringify(body), {
-//        status: 201,
-//        headers: { 'Content-type': 'application/json' }
-//     });
-// }
-
-
-// function jsonOk (body) {
-//     const mockResponse = new window.Response(JSON.stringify(body), {
-//       status: 201,
-//       headers: {
-//         'Content-type': 'application/json'
-//       }
-//     });
-  
-//     return Promise.resolve(mockResponse);
-//   }
-  
-// const MOCK_JSON = {
-//     'status' : 'Success!'
-//     };
-  
+const fetch = require('node-fetch');
 
 
 const name ="storename";
@@ -53,30 +20,19 @@ reg_data = {
 
 };
 /**
-* - Create an account, login with details, and check if token comes
+* - Create an account
 */
- // let stub = sinon.stub(addStore, 'fetch'); //add stub
-    // stub.onCall(0).returns(jsonOk(MOCK_JSON));
-    // });
-    // beforeEach(()=>{
-    //     mockApiResponse();
-    // })
-describe('Create Account, Login and Check Token', () => {
-    beforeEach( () =>{
-        sinon
-        .stub(process, "addstore")
-        .yields(undefined,{},JSON.stringify({data:{status:"Success!"}}))
-    });
-
-    // afterEach(() => {
-    //     process.addStore.restore();  //remove stub
-    // });
-    
-    it('should create a store', done => {
-        addStore(reg_data)
-        .then( data => {
-            data.status.should.exist;
+describe('Create Account and  Login', () => {
+    describe('Add a new store',() => {
+        it('should create a store',  (done) => {
+            const AddStore = sinon.stub().returns({"status":"Success!"});
+            console.log(AddStore());
+            const result = AddStore(reg_data);
+            console.log(result);
+            result.should.exist;
+            expect(result.status).equal("Success!");
             done();
-        })
-    })
+        })  
+    });
+    
 })

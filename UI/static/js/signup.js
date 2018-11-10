@@ -1,4 +1,5 @@
 // Signup/Add a store
+const fetch = require('node-fetch');
 
 // let reg = document.getElementById('addStore')
 // if (reg){
@@ -25,6 +26,8 @@
 function addStore (data) {
     //e.preventDefault();
     let registrationUrl = 'https://storemanager-v2.herokuapp.com/api/v2/signup ';
+    dt2 = {}
+    dt2.url = registrationUrl;
     fetch(registrationUrl, {
         method: 'POST',
         headers: {
@@ -39,6 +42,7 @@ function addStore (data) {
                 // if request is unsuccessful
                 document.getElementById('output').style.color = 'red'
                 document.getElementById('output').innerHTML = data.message
+                dt2.status = data.status;
             }
             if (data.status === "Success!"){
                 // if request is successful
@@ -47,8 +51,11 @@ function addStore (data) {
                 setTimeout(function () {
                     window.location.href = "login.html";
                  }, 2000)
+                 dt2.status = data.status;
             }
+        
         })
+        return dt2;
 
     }
 //module.exports =addStore;
