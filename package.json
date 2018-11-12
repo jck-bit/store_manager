@@ -1,0 +1,28 @@
+{
+  "name": "store_manager",
+  "version": "1.0.0",
+  "description": "vanilla js practise",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel UI/html/*.html",
+    "test": "mocha  ./UI/static/js/__tests__"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwanj-k/store_manager.git"
+  },
+  "keywords": [
+    "jasmine"
+  ],
+  "author": "kwanj-k",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kwanj-k/store_manager/issues"
+  },
+  "homepage": "https://github.com/kwanj-k/store_manager#readme",
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "parcel": "^1.10.3",
+    "sinon": "^7.1.1"
+  }
+}
