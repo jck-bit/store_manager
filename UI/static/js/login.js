@@ -29,7 +29,7 @@ function login(e){
             // store the token created when user is logged in
             if (data.status === "Success!"){
                 // if request is successful
-                window.location.href = "products.html";
+                window.location.assign("products.html");
             }
             window.localStorage.setItem('token', data.token);
         })

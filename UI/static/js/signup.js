@@ -1,13 +1,7 @@
 // Signup/Add a store
-let reg = document.getElementById('addStore')
-     if (reg){
-         reg.addEventListener
-         ('submit', addStore);
-     }
 
-function addStore (e) {
-    e.preventDefault();
-    let registrationUrl = 'https://storemanager-v2.herokuapp.com/api/v2/signup ';
+addStore =  () => {
+    let registrationUrl = 'https://storemanager-v2.herokuapp.com/api/v2/signup';
     let name = document.getElementById('storename').value;
     let category = document.getElementById('category').value;
     let email = document.getElementById('email').value;
@@ -45,7 +39,7 @@ function addStore (e) {
                 document.getElementById('output').style.color = 'green'
                 document.getElementById('output').innerHTML = data.message
                 setTimeout(function () {
-                    window.location.href = "login.html";
+                    window.location.assign("login.html");
                  }, 2000)
             }
         
