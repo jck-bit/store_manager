@@ -15,7 +15,5 @@ script:
   - npm test --coverage
   - npm run test:badges
 
-  - coveralls
-
 after_success:
   - coveralls
