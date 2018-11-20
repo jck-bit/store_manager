@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "parcel html/*.html",
-    "test": "node_modules/mocha/bin/mocha  ./tests "
+    "test": "jest"
   },
   "author": "kwanj-k",
   "license": "ISC"
