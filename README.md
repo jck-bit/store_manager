@@ -1,4 +1,4 @@
-# Store Manager [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Build Status](https://travis-ci.org/kwanj-k/store_manager.svg?branch=ch-tests-%23161858352)](https://travis-ci.org/kwanj-k/store_manager) [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com) 
+# Store Manager [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Build Status](https://travis-ci.org/kwanj-k/store_manager.svg?branch=ch-tests-%23161858352)](https://travis-ci.org/kwanj-k/store_manager) 
 
 ## Summary
 
