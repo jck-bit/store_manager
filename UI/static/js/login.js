@@ -1,15 +1,8 @@
-// // User Login
+// User Login
 
-let signin = document.getElementById('login')
-if (signin){
-    signin.addEventListener
-    ('submit', login);
-    
-function login(e){
-    e.preventDefault();
+login = () =>{
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
-    //endpoint to sign in the user
     let loginUrl = 'https://storemanager-v2.herokuapp.com/api/v2/auth/login';
     fetch(loginUrl, {
         method: 'POST',
@@ -34,4 +27,4 @@ function login(e){
             window.localStorage.setItem('token', data.token);
         })
     }
-  }
+  
