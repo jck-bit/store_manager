@@ -15,21 +15,22 @@ describe("Test user login", () => {
                 <a id="submit" onclick="login()" > <input type="submit" value="login"></a>    
             </div>
         </form>`;
-    
+
         fetchMock = jest.spyOn(global, "fetch")
         fetchMock.mockImplementation(() => Promise.resolve({
-          json: () => Promise.resolve({status: "Success!",token:"myrtokenmen"})}))
+            json: () => Promise.resolve({ status: "Success!", token: "myrtokenmen" })
+        }))
         assignMock = jest.spyOn(window.location, "assign")
         assignMock.mockImplementation(() => {})
     })
-    
+
     //Tear Down
     afterEach(() => {
         fetchMock.mockRestore();
         assignMock.mockRestore();
         jest.resetModules();
     })
-    
+
     it("User can login", async() => {
         document.getElementById("submit").click();
         expect(fetchMock).toHaveBeenCalledTimes(1);
@@ -38,12 +39,12 @@ describe("Test user login", () => {
         expect(fetchArgs[1]).toEqual({
             method: "POST",
             body: JSON.stringify({
-                email:"email@gmail.com",
+                email: "email@gmail.com",
                 password: "password"
             }),
             headers: {
                 'Accept': 'application/json, text/plain, */*',
-                'Content-type':'application/json'
+                'Content-type': 'application/json'
             }
         })
         await Promise.resolve().then();

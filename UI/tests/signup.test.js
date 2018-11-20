@@ -1,6 +1,6 @@
 //Signup test
 require("../static/js/signup")
-describe("store registration",() => {
+describe("store registration", () => {
     let fetchMock;
     let assignMock;
     beforeEach(() => {
@@ -23,46 +23,47 @@ describe("store registration",() => {
             </div>
         </form>`;
 
-    fetchMock = jest.spyOn(global, "fetch")
-    fetchMock.mockImplementation(() => Promise.resolve({
-      json: () => Promise.resolve({status: "Success!",message:"Store successfully created"})}))
-    assignMock = jest.spyOn(window.location, "assign")
-    assignMock.mockImplementation(() => {})
-})
-
-//Tear Down
-afterEach(()=>{
-    fetchMock.mockRestore();
-    assignMock.mockRestore();
-    jest.resetModules();
-})
-
-//Test for valid store registration
-it("user can add a store.", async() => {
-    document.getElementById("submit").click();
-    expect(fetchMock).toHaveBeenCalledTimes(1);
-    const fetchArgs = fetchMock.mock.calls[0];
-    expect(fetchArgs[0]).toBe("https://storemanager-v2.herokuapp.com/api/v2/signup");
-    expect(fetchArgs[1]).toEqual({
-        method: "POST",
-        body: JSON.stringify({
-            "name":"ctrimtest",
-            "category":"categorytest",
-            "email":"ctrimtest@gmail.com",
-            "password":"ctrimtestpass"}),
-        headers: {
-            'Accept': 'application/json, text/plain, */*',
-            'Content-type':'application/json'
-        }
+        fetchMock = jest.spyOn(global, "fetch")
+        fetchMock.mockImplementation(() => Promise.resolve({
+            json: () => Promise.resolve({ status: "Success!", message: "Store successfully created" })
+        }))
+        assignMock = jest.spyOn(window.location, "assign")
+        assignMock.mockImplementation(() => {})
     })
-    await Promise.resolve().then();
-    expect(document.getElementById("output").innerHTML).toBe("Store successfully created");
-    await Promise.resolve().then();
-    setTimeout(function () {
-        expect(assignMock).toHaveBeenCalledTimes(1);
-        expect(assignMock.mock.calls[0][0]).toBe("login.html");
-     }, 3000)
-    
+
+    //Tear Down
+    afterEach(() => {
+        fetchMock.mockRestore();
+        assignMock.mockRestore();
+        jest.resetModules();
+    })
+
+    //Test for valid store registration
+    it("user can add a store.", async() => {
+        document.getElementById("submit").click();
+        expect(fetchMock).toHaveBeenCalledTimes(1);
+        const fetchArgs = fetchMock.mock.calls[0];
+        expect(fetchArgs[0]).toBe("https://storemanager-v2.herokuapp.com/api/v2/signup");
+        expect(fetchArgs[1]).toEqual({
+            method: "POST",
+            body: JSON.stringify({
+                "name": "ctrimtest",
+                "category": "categorytest",
+                "email": "ctrimtest@gmail.com",
+                "password": "ctrimtestpass"
+            }),
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-type': 'application/json'
+            }
+        })
+        await Promise.resolve().then();
+        expect(document.getElementById("output").innerHTML).toBe("Store successfully created");
+        await Promise.resolve().then();
+        setTimeout(function() {
+            expect(assignMock).toHaveBeenCalledTimes(1);
+            expect(assignMock.mock.calls[0][0]).toBe("login.html");
+        }, 3000)
+
     })
 })
-
