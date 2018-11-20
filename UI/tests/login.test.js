@@ -2,6 +2,7 @@
 require("../static/js/login")
 describe("Test user login", () => {
     let fetchMock;
+    let assignMock;
     beforeEach(() => {
         document.body.innerHTML += `
         <form id="login">
@@ -47,6 +48,7 @@ describe("Test user login", () => {
         })
         await Promise.resolve().then();
         expect(localStorage.getItem("token")).not.toBeNull();
+        await Promise.resolve().then();
         await Promise.resolve().then();
         expect(assignMock).toHaveBeenCalledTimes(1);
         expect(assignMock.mock.calls[0][0]).toBe("products.html");

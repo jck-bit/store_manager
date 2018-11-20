@@ -2,6 +2,7 @@
 require("../static/js/signup")
 describe("store registration",() => {
     let fetchMock;
+    let assignMock;
     beforeEach(() => {
         document.body.innerHTML += `
         <form id="addStore"  >
@@ -25,11 +26,14 @@ describe("store registration",() => {
     fetchMock = jest.spyOn(global, "fetch")
     fetchMock.mockImplementation(() => Promise.resolve({
       json: () => Promise.resolve({status: "Success!",message:"Store successfully created"})}))
+    assignMock = jest.spyOn(window.location, "assign")
+    assignMock.mockImplementation(() => {})
 })
 
 //Tear Down
 afterEach(()=>{
     fetchMock.mockRestore();
+    assignMock.mockRestore();
     jest.resetModules();
 })
 
@@ -53,6 +57,12 @@ it("user can add a store.", async() => {
     })
     await Promise.resolve().then();
     expect(document.getElementById("output").innerHTML).toBe("Store successfully created");
+    await Promise.resolve().then();
+    setTimeout(function () {
+        expect(assignMock).toHaveBeenCalledTimes(1);
+        expect(assignMock.mock.calls[0][0]).toBe("login.html");
+     }, 3000)
+    
     })
 })
 

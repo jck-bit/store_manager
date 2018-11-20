@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "parcel html/*.html",
-    "test": "jest"
+    "test": "jest --collectCoverage"
   },
   "jest": {
    
