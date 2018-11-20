@@ -26,12 +26,24 @@
     <div>
         <form id="newproduct"  class="modal" style="display:none">
             <div class="col-75"><label >Product Name</label></div>
-            <div class="col-75"><input id="name" type="text"  placeholder="name of product.."></div>
+            <div class="col-75" class="col-75"><input id="name" type="text"  placeholder="name of product.."></div>
+            <div class="col-75"><label >Product Category</label></div>
+            <div id="select" class="dropdown">
+                <button id="btntitle" class="dropbtn">Select Category</button>
+                <div id="catdrop"  class="dropdown-content"></div>
+            </div>
             <div class="col-75"><label >Number_Of_Items</label></div>
             <div class="col-75"><input id="number" type="text"  placeholder="20 "></div>
             <div class="col-75"><label >Price KSH</label></div>
             <div class="col-75"><input id="price" type="text"  placeholder="200"></div>
             <a onclick="addProduct(event);" href="#" ><input   type="submit" value="Done"><br></a>
+        </form>
+    </div>
+    <div>
+        <form id="newcat"  class="modal" style="display:none">
+            <div class="col-75"><label >Category Name</label></div>
+            <div class="col-75"><input id="catname" type="text"  placeholder="name of category.."></div>
+            <a onclick="addCategory(event);" href="#" ><input   type="submit" value="Done"><br></a>
         </form>
     </div>
     <div>
@@ -49,6 +61,7 @@
         <h1>Available Products</h1>
         <p id="output"></p>
         <a href="#" onclick="adc()"><input style="background-color: #0BC474" type="submit" value="AddProduct"></a>
+        <a href="#" onclick="adc2()"><input  type="submit" value="AddCategory"></a>
         <div class="stock">
             <ul id="products"></ul>
         </div>

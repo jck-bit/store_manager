@@ -32,7 +32,6 @@ function deleteOneProduct(){
                 // if request is successful
                 document.getElementById('output').style.color = 'green'
                 document.getElementById('output').innerHTML = data.status
-                return message
             }
     
         })

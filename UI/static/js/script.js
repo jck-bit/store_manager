@@ -15,10 +15,14 @@ function sell() {
 const modal = document.getElementById('newproduct');
 const mod2 = document.getElementById('details');
 const add = document.getElementById("add");
+const cat = document.getElementById('newcat');
 
 function adc() {
     modal.style.display = "block";
 }
 function details() {
     mod2.style.display = "block";
+}
+function adc2() {
+    cat.style.display = "block";
 }
