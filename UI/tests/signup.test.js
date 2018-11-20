@@ -37,7 +37,7 @@ afterEach(()=>{
     jest.resetModules();
 })
 
-//Test for valid user registration
+//Test for valid store registration
 it("user can add a store.", async() => {
     document.getElementById("submit").click();
     expect(fetchMock).toHaveBeenCalledTimes(1);
