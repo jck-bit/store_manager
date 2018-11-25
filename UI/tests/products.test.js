@@ -1,6 +1,5 @@
 //products test
 require("../static/js/admin-products")
-
 describe("Test Add Product", () => {
     let fetchMock;
     let assignMock;

@@ -25,17 +25,18 @@
         </ul>
     </nav>
     <form id="cartaddr">
-        <div id="number" class="modal" style="display:none;">
+        <div id="number" class="cart-modal" style="display:none;">
             <div class="col-75"><label >Number of items</label></div>
             <div class="col-75"><input id="cnumber" type="number"  placeholder="i.e 4"></div>
             <p id="output2"></p>
             <a  ><input type="submit" value="AddtoCart"><br></a>
         </div>
     </form>
-    <div class="welcome" id="welcome">
+    <div class="products" id="welcome">
         <h1 style="color: lightseagreen" >Available Products</h1>
         <p id="output"></p>
-        <ul onClick="addProductsNum();"id="products"></ul>
+        <div onClick="addProductsNum();"id="products"></div>
+        <!--<ul onClick="addProductsNum();"id="products"></ul>--> 
     </div>
     <footer class="footercentered">
         <p class="footer-company-motto">Sit back.StoreManger will handle it.</p>

@@ -45,7 +45,7 @@ addProduct = () => {
 }
 
 //New category 
-function addCategory(e) {
+addCategory = (e) => {
     e.preventDefault();
     let categoryUrl = 'https://storemanager-v2.herokuapp.com/api/v2/categories';
     let name = document.getElementById('catname').value;
