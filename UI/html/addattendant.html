@@ -23,13 +23,15 @@
         </ul>
     </nav>
      <div class="welcome">
+        <form onsubmit="event.preventDefault();">
           <div class="col-25"><label >Email Address</label></div>
           <div class="col-75"><input id="email" type="text"  placeholder="email@example.com.."></div>
           <div class="col-25"><label >Password</label></div>
           <div class="col-75"><input id="password" type="password"  placeholder="*******"></div>
           <p id="output"></p>
-          <a href="#" onclick="addAttendant()"> <input type="submit" style="background-color: #0BC474" value="AddAttendant"></a>  
-          <a href="#" onclick="addAdmin()"><input type="submit" value="MakeAdmin"></a>    
+          <a  onclick="addAttendant();"> <input type="submit" style="background-color: #0BC474" value="AddAttendant"></a>  
+          <a  onclick="addAdmin();"><input type="submit" value="MakeAdmin"></a> 
+        </form>   
      </div>
     <footer class="footercentered">
         <p class="footer-company-motto">Sit back.StoreManger will handle it.</p>

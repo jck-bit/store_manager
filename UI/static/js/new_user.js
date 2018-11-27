@@ -1,6 +1,5 @@
 //AddAttendant
-function addAttendant() {
-    //e.preventDefault();
+addAttendant = () => {
     let attendantUrl = 'https://storemanager-v2.herokuapp.com/api/v2/attendant';
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
@@ -37,15 +36,12 @@ function addAttendant() {
         })
 }
 
-
 // Add admin
-
-function addAdmin() {
+addAdmin = () => {
     let adminUrl = 'https://storemanager-v2.herokuapp.com/api/v2/admin';
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
     let token = window.localStorage.getItem('token');
-    console.log(token);
     if (token === null) {
         window.location.href = "login.html";
     }
