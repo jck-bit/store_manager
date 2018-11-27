@@ -71,7 +71,7 @@ function addAdmin() {
                 document.getElementById('output').style.color = 'green'
                 document.getElementById('output').innerHTML = data.message
                 setTimeout(function() {
-                    window.location.href = "addattendant.html";
+                    window.location.assign("addattendant.html");
                 }, 8000)
             }
         })

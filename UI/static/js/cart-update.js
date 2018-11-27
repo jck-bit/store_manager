@@ -7,7 +7,6 @@ if (cartAdd1) {
 
 //Checkout or sell an entire cart
 function cartCheckOut() {
-    //e.preventDefault();
     let cartUrl = `https://storemanager-v2.herokuapp.com/api/v2/cart`;
     let token = window.localStorage.getItem('token');
     fetch(cartUrl, {
@@ -40,7 +39,6 @@ function cartCheckOut() {
 
 //Remove a product from cart
 function deleteOneProduct() {
-    //e.preventDefault();
     let productId = sessionStorage.getItem("productid");
     let cartUrl = `https://storemanager-v2.herokuapp.com/api/v2/cart/${productId}`;
     let token = window.localStorage.getItem('token');
@@ -109,7 +107,6 @@ function cartProductUpdate(e) {
 
 //Delete an entire cart
 function deleteEntireCart() {
-    //e.preventDefault();
     let cartUrl = `https://storemanager-v2.herokuapp.com/api/v2/cart`;
     let token = window.localStorage.getItem('token');
     fetch(cartUrl, {

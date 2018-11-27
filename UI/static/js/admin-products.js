@@ -73,7 +73,7 @@ addCategory = (e) => {
                 document.getElementById('output').style.color = 'green'
                 document.getElementById('output').innerHTML = data.status
                 setTimeout(() => {
-                    window.location.href = "stock.html";
+                    window.location.assign("stock.html");
                 }, 2000)
             }
         })

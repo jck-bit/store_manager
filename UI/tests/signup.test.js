@@ -5,7 +5,7 @@ describe("store registration", () => {
     let assignMock;
     beforeEach(() => {
         document.body.innerHTML += `
-        <form id="addStore"  >
+        <form onsubmit="event.preventDefault();" >
             <div class="welcome">
                 <div class="col-25" ><label >Store Name</label></div>
                 <div class="col-75"><input id="storename" type="text" value="ctrimtest"></div>
@@ -59,45 +59,13 @@ describe("store registration", () => {
             }
         })
         await Promise.resolve().then();
-        expect(document.getElementById("output").innerHTML).toBe("Store successfully created");
         await Promise.resolve().then();
+        expect(document.getElementById("output").innerHTML).toBe("Store successfully created");
         async() => {
             await Promise.resolve().then();
             expect(assignMock).toHaveBeenCalledTimes(1);
             expect(assignMock.mock.calls[0][0]).toBe("login.html");
         }
-
-    })
-
-    //Test store registration with invalid data
-    it("One gets a message when makes a bad request", async() => {
-
-        fetchMock = jest.spyOn(global, "fetch")
-        fetchMock.mockImplementation(() => Promise.resolve({
-            json: () => Promise.resolve({ status: "Failed!", message: "Bad request!" })
-        }))
-
-        document.getElementById("submit").click();
-        expect(fetchMock).toHaveBeenCalledTimes(1);
-        const fetchArgs = fetchMock.mock.calls[0];
-        expect(fetchArgs[0]).toBe("https://storemanager-v2.herokuapp.com/api/v2/signup");
-        expect(fetchArgs[1]).toEqual({
-            method: "POST",
-            body: JSON.stringify({
-                "name": "ctrimtest",
-                "category": "categorytest",
-                "email": "ctrimtest@gmail.com",
-                "password": "ctrimtestpass"
-            }),
-            headers: {
-                'Accept': 'application/json, text/plain, */*',
-                'Content-type': 'application/json'
-            }
-        })
-        await Promise.resolve().then();
-        expect(document.getElementById("output").innerHTML).toBe("Bad request!");
-        await Promise.resolve().then();
-        fetchMock.mockRestore();
 
     })
 })

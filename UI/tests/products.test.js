@@ -50,8 +50,8 @@ describe("Test Add Product", () => {
             }
         })
         await Promise.resolve().then();
-        expect(document.getElementById("output").innerHTML).toBe("Product successfully added");
         await Promise.resolve().then();
+        expect(document.getElementById("output").innerHTML).toBe("Product successfully added");
         setTimeout(function() {
             expect(assignMock).toHaveBeenCalledTimes(1);
             expect(assignMock.mock.calls[0][0]).toBe("products.html");

@@ -35,7 +35,7 @@ fetch(salesUrl, {
             })
 
         } else {
-            window.location.href = "login.html";
+            window.location.assign("login.html");
         }
 
     })
