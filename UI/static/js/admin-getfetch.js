@@ -42,7 +42,7 @@ fetch(categoryUrl, {
             let categories = data.categories; // Get the results
             return categories.map(function(category) { // Map through the results and for each run the code below
                 div1.innerHTML += `
-                <a selected="selected" onClick="stashCatId(${category.id});" >${category.name}</a>`;
+                <a selected="selected" onClick="stashCatId(${category.id});" ><option >${category.name}</option></a>`;
                 if (catname !== null) {
                     btntitle.innerHTML += `${catname}`;
                 }

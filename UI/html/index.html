@@ -31,15 +31,16 @@
                 <a href="newstore.html"><input type="submit" value="Get Started"></a>
             </div>
         </div>
-        <form id="login">
+        <form  onsubmit="event.preventDefault();">
             <div class="homelogin">
                 <div class="col-75"><label >Email Address</label></div>
                 <div class="col-75"><input id="email" type="text"  placeholder="email@example.com.."></div>
                 <div class="col-25"><label >Password</label></div>
                 <div class="col-75"><input id="password" type="password"  placeholder="*******"></div>
                 <p id="output"></p>
-                <div class="col-75"><a href="products.html"> <input type="submit" style="background-color: #0BC474" value ="LogIn"></a></div> 
-                </div>
+                <div class="col-75">
+                    <a onclick="login()"> <input type="submit" style="background-color: #0BC474" value ="LogIn"></a>
+                </div> 
             </div>
         </form>
     <footer class="footercentered">

@@ -38,7 +38,7 @@ addProduct = () => {
                 document.getElementById('output').style.color = 'green'
                 document.getElementById('output').innerHTML = data.message
                 setTimeout(() => {
-                    window.location.assign("products.html");
+                    window.location.assign("stock.html");
                 }, 2000)
             }
         })

@@ -25,6 +25,7 @@ Card
 }
 .products h1 {
     margin-top: 60px;
+    color: #114B5F;
 }
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -47,7 +48,7 @@ Card
     display: inline-block;
     padding: 8px;
     color: white;
-    background-color: #000500;
+    background-color: #114B5F;
     text-align: center;
     cursor: pointer;
     width: 100%;

@@ -1,0 +1,57 @@
+.categories-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin: 50px 150px;
+    padding: 10px 30px;
+    overflow: hidden;
+    width: 75%;
+    font-size: 1.1em;
+    color: #550527;
+}
+.cat-modal input[type=text] {
+    margin-top: 8px;
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.cat-modal {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 20%;
+    margin-top: 70px;
+    margin-left: 200px;
+    padding: 20px;
+
+}
+.category ul li {
+    color: rgb(37, 37, 99);
+    font-style: oblique;
+    font-size: 1.4em;
+    width: 85%;
+    border-radius: 4px;
+    background-color: rgb(180, 172, 172);
+    list-style: none;
+    padding: 5px !important;
+}
+
+.del input[type=submit]{
+	background-color: #CF5C3F !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .categories-container {
+        width: 60%;
+        margin-left:40px;
+        padding: 4px;
+    }
+}
+
+@media screen and (max-width: 812px) {
+    .categories-container {
+        margin-left: 40px;
+        width: 70%;
+    }
+} 
