@@ -16,10 +16,10 @@
             </li>
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html" >Products</a></li>
-            <li><a href="carts.html" >Carts</a></li>
+            <li><a href="carts.html" >Cart</a></li>
             <li><a  href="profile.html" class="active">Your Profile</a></li>
             <li><a href="stock.html" class="cstore">Admin Site</a></li>
-            <li><a href="./login.html" class="login">Logout</a></li>
+            <li><a onClick="logout();" class="login">Logout</a></li>
         </ul>
     </nav>
 
@@ -27,140 +27,16 @@
         <a href="profile.html"><input type="submit" 
               value="Back"></a>
         <h2>Sale Record</h2>
+        <p id="output"></p>
+        <h3 id="total"></h3>
         <div style="overflow-x:auto;">
-            <table>
+            <table id="tablecontents">
                 <tr>
                     <th>Product</th>
-                    <th>Time</th>
-                    <th>Day</th>
-                    <th>Buyer</th>
-                    <th>Price(KSH)</th>
-                </tr>
-                <tr>
-                    <td>Super Chucky Pkt</td>
-                    <td>9.00 AM</td>
-                    <td>13/09/2018</td>
-                    <td>cuhi</td>
-                    <td>100</td>
-                </tr>
-                <tr>
-                    <td>Rhino Ctn</td>
-                    <td>11.00 AM</td>
-                    <td>13/09/2018</td>
-                    <td>kwanj</td>
-                    <td>3300</td>
-                </tr>
-                <tr>
-                    <td>Nescafe Ctn</td>
-                    <td>12.30 PM</td>
-                    <td>13/09/2018</td>
-                    <td>kwanj</td>
-                    <td>2850</td>
-                </tr>
-                <tr>
-                    <td>Zenta Ctn</td>
-                    <td>2.00 PM</td>
-                    <td>13/08/2018</td>
-                    <td>athena</td>
-                    <td>1000</td>
-                </tr>
-                <tr>
-                    <td>AmericanParty Ctn</td>
-                    <td>5.00 PM</td>
-                    <td>13/07/2018</td>
-                    <td>jada</td>
-                    <td>3750</td>
-                </tr>
-                <tr>
-                    <td>Rosy Ctn</td>
-                    <td>12.30 PM</td>
-                    <td>10/07/2018</td>
-                    <td>zeus</td>
-                    <td>920</td>
-                </tr>
-                <tr>
-                    <td>Super Chucky Pkt</td>
-                    <td>9.00 AM</td>
-                    <td>13/09/2018</td>
-                    <td>cuhi</td>
-                    <td>100</td>
-                </tr>
-                <tr>
-                    <td>Rhino Ctn</td>
-                    <td>11.00 AM</td>
-                    <td>13/09/2018</td>
-                    <td>kwanj</td>
-                    <td>3300</td>
-                </tr>
-                <tr>
-                    <td>Nescafe Ctn</td>
-                    <td>12.30 PM</td>
-                    <td>13/09/2018</td>
-                    <td>kwanj</td>
-                    <td>2850</td>
-                </tr>
-                <tr>
-                    <td>Zenta Ctn</td>
-                    <td>2.00 PM</td>
-                    <td>13/08/2018</td>
-                    <td>athena</td>
-                    <td>1000</td>
-                </tr>
-                <tr>
-                    <td>AmericanParty Ctn</td>
-                    <td>5.00 PM</td>
-                    <td>13/07/2018</td>
-                    <td>jada</td>
-                    <td>3750</td>
-                </tr>
-                <tr>
-                    <td>Rosy Ctn</td>
-                    <td>12.30 PM</td>
-                    <td>10/07/2018</td>
-                    <td>zeus</td>
-                    <td>920</td>
-                </tr>
-                <tr>
-                    <td>Super Chucky Pkt</td>
-                    <td>9.00 AM</td>
-                    <td>13/09/2018</td>
-                    <td>cuhi</td>
-                    <td>100</td>
-                </tr>
-                <tr>
-                    <td>Rhino Ctn</td>
-                    <td>11.00 AM</td>
-                    <td>13/09/2018</td>
-                    <td>kwanj</td>
-                    <td>3300</td>
-                </tr>
-                <tr>
-                    <td>Nescafe Ctn</td>
-                    <td>12.30 PM</td>
-                    <td>13/09/2018</td>
-                    <td>kwanj</td>
-                    <td>2850</td>
-                </tr>
-                <tr>
-                    <td>Zenta Ctn</td>
-                    <td>2.00 PM</td>
-                    <td>13/08/2018</td>
-                    <td>athena</td>
-                    <td>1000</td>
-                </tr>
-                <tr>
-                    <td>AmericanParty Ctn</td>
-                    <td>5.00 PM</td>
-                    <td>13/07/2018</td>
-                    <td>jada</td>
-                    <td>3750</td>
-                </tr>
-                <tr>
-                    <td>Rosy Ctn</td>
-                    <td>12.30 PM</td>
-                    <td>10/07/2018</td>
-                    <td>zeus</td>
-                    <td>920</td>
+                    <th>Number</th>
+                    <th>Time Stamp</th>
+                    <th>Sold by</th>
+                    <th>Cost(KSH)</th>
                 </tr>
             </table>
         </div>
@@ -176,6 +52,7 @@
     </footer>
 
     <script type="text/javascript" src="../static/js/script.js"></script>
-    <script type="text/javascript" src="../static/js/dts.js"></script>
+    <script type="text/javascript" src="../static/js/mysales.js"></script>
+    <script type="text/javascript" src="../static/js/logout.js"></script>
 </body>
 </html>

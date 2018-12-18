@@ -17,18 +17,21 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="stock.html" >Stock</a></li>
             <li><a href="sales.html">Sales</a></li>
-            <li><a href="#" class="active">AddAttendant</a></li>
+            <li><a href="#" class="active">Add User</a></li>
             <li><a href="products.html">Attendant Site</a></li>
-            <li><a href="./login.html" class="login">Logout</a></li>
+            <li><a onclick="logout()" class="login">Logout</a></li>
         </ul>
     </nav>
      <div class="welcome">
+        <form onsubmit="event.preventDefault();">
           <div class="col-25"><label >Email Address</label></div>
-          <div class="col-75"><input type="text"  placeholder="email@example.com.."></div>
+          <div class="col-75"><input id="email" type="text"  placeholder="email@example.com.."></div>
           <div class="col-25"><label >Password</label></div>
-          <div class="col-75"><input type="password"  placeholder="*******"></div>
-          <a href="#" onclick="user_add()"> <input type="submit" style="background-color: #0BC474" value="AddAttendant"></a>  
-          <a href="#" onclick="user_add2()"><input type="submit" value="MakeAdmin"></a>    
+          <div class="col-75"><input id="password" type="password"  placeholder="*******"></div>
+          <p id="output"></p>
+          <a  onclick="addAttendant();"> <input type="submit" style="background-color: #0BC474" value="AddAttendant"></a>  
+          <a  onclick="addAdmin();"><input type="submit" value="MakeAdmin"></a> 
+        </form>   
      </div>
     <footer class="footercentered">
         <p class="footer-company-motto">Sit back.StoreManger will handle it.</p>
@@ -38,6 +41,7 @@
         </p>
         <p class="footer-company-name">Store Manager.inc &copy; 2018</p>
     </footer>
-     <script type="text/javascript" src="../static/js/script.js"></script>
+    <script type="text/javascript" src="../static/js/new_user.js"></script>
+    <script type="text/javascript" src="../static/js/logout.js"></script>
 </body>
 </html>

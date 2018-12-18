@@ -39,6 +39,18 @@ h1 {
 .del input[type=submit]{
 	background-color: #CF5C3F !important;
 }
+/* Style The Dropdown */
+select {
+    color: black;
+    padding: 11px 20px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+select option {
+    font-size: 1.2em;
+    padding: 8px;
+}
 @media screen and (max-width: 1024px) {
     .pcontainer {
         width: 60%;

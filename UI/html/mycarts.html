@@ -16,98 +16,37 @@
             </li>
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
-            <li><a href="carts.html"  >Carts</a></li>
-            <li><a  href="profile.html" class="active">Your Profile</a></li>
+            <li><a href="carts.html" class="active" >Cart</a></li>
+            <li><a  href="profile.html">Your Profile</a></li>
             <li><a href="stock.html" class="cstore">Admin Site</a></li>
-            <li><a href="./login.html" class="login">Logout</a></li>
+            <li><a onClick="logout();"class="login">Logout</a></li>
         </ul>
     </nav>
+    <form id="cartaddr"  >
+        <div id="number" class="welcome" style="display:none;">
+            <div class="col-75"><label >Number of items</label></div>
+            <div class="col-75"><input id="cnumber" type="number"  placeholder="i.e 4"></div>
+            <p id="output2"></p>
+            <a  ><input type="submit" value="Update"><br></a>
+        </div>
+    </form>
     <div class="welcome">
-            <a href="profile.html"><input type="submit" 
-                value="Back"></a>
-            <h1>Pending Carts</h1>
-           <ul>
-                <style>
-                    a{
-                        color: inherit;
-                        text-decoration: none;
-                        font-style: italic;
-                    }
-                </style>
-               <li>  <strong>Kelvin</strong><br>
-                    <strong>Items:</strong>[Kaluma,superchunky]<br>
-                    <strong>Cost:    </strong>KSH: 585<br>
-               </li>
-               <div class="btns">
-                    <a href="#"  onclick="sell()"><input type="submit" value="sell"></a>
-                    <a href="#"  onclick="del()" class="del"><input type="submit" value="Delete"></a>
-                </div><br>
-               <li>  <strong>Kwanj</strong>
-                    <strong>Items:</strong>[Kaluma,superchunky]<br>
-                    <strong>Cost:    </strong>KSH: 585<br>
-               </li>
-               <div class="btns">
-                    <a href="#"  onclick="sell()"><input type="submit" value="sell"></a>
-                    <a href="#"  onclick="del()" class="del"><input type="submit" value="Delete"></a>
-                </div><br>
-               
-               <li>  <strong>Bonnie</strong>
-                    <strong>Items:</strong>[Kaluma,superchunky]<br>
-                    <strong>Cost:    </strong>KSH: 585<br>
-               </li>
-               <div class="btns">
-                    <a href="#"  onclick="sell()"><input type="submit" value="sell"></a>
-                    <a href="#"  onclick="del()" class="del"><input type="submit" value="Delete"></a>
-                </div><br>
-
-               <li>  <strong>jade</strong>
-                    <strong>Items:</strong>[Kaluma,superchunky]<br>
-                    <strong>Cost:    </strong>KSH: 585<br>
-               </li>
-               <div class="btns">
-                    <a href="#"  onclick="sell()"><input type="submit" value="sell"></a>
-                    <a href="#"  onclick="del()" class="del"><input type="submit" value="Delete"></a>
-                </div><br>
-
-               <li>  <strong>Kelvin</strong>
-                    <strong>Items:</strong>[Kaluma,superchunky]<br>
-                    <strong>Cost:    </strong>KSH: 585<br>
-               </li>
-               
-               <div class="btns">
-                    <a href="#"  onclick="sell()"><input type="submit" value="sell"></a>
-                    <a href="#"  onclick="del()" class="del"><input type="submit" value="Delete"></a>
-                </div><br>
-               <li>  <strong>Kwanj</strong>
-                    <strong>Items:</strong>[Kaluma,superchunky]<br>
-                    <strong>Cost:    </strong>KSH: 585<br>
-               </li>
-               
-               <div class="btns">
-                    <a href="#"  onclick="sell()"><input type="submit" value="sell"></a>
-                    <a href="#"  onclick="del()" class="del"><input type="submit" value="Delete"></a>
-                </div><br>
-
-               <li>  <strong>Bonnie</strong>
-                    <strong>Items:</strong>[Kaluma,superchunky]<br>
-                    <strong>Cost:    </strong>KSH: 585<br>
-               </li>
-               
-               <div class="btns">
-                    <a href="#"  onclick="sell()"><input type="submit" value="sell"></a>
-                    <a href="#"  onclick="del()" class="del"><input type="submit" value="Delete"></a>
-                </div><br>
-               <li>  <strong>jade</strong><br>
-                    <strong>Items:</strong>[Kaluma,superchunky]<br>
-                    <strong>Cost:    </strong>KSH: 585<br>
-               </li>
-               
-               <div class="btns">
-                    <a href="#"  onclick="sell()"><input type="submit" value="sell"></a>
-                    <a href="#"  onclick="del()" class="del"><input type="submit" value="Delete"></a>
-                </div><br>
-           </ul>
-       </div>
+        <a href="profile.html"><input type="submit" value="Back"></a>
+        <a href="#" onclick="cartCheckOut();"> <input type="submit" style="background-color: #0BC474" value="CheckOut"></a>  
+        <a href="#" onclick="deleteEntireCart();" class="del"><input type="submit" value="DeleteAll"></a> 
+        <p id="output"></p>
+        <h2 id="total"></h2>
+        <ul id="cart">
+            <style>
+                a{
+                    color: inherit;
+                    text-decoration: none;
+                    font-style: italic;
+                }
+            </style>
+            <script type="text/javascript" src="../static/js/cart.js"></script>
+        </ul>
+    </div>
     <footer class="footercentered">
         <p class="footer-company-motto">Sit back.StoreManger will handle it.</p>
         <p class="footer-links">
@@ -116,11 +55,9 @@
         </p>
         <p class="footer-company-name">Store Manager.inc &copy; 2018</p>
     </footer>
-
-    <script type="text/javascript" src="../static/js/t.js"></script>
-    <script type="text/javascript" src="../static/js/script.js"></script>
-
-
+    <script type="text/javascript" src="../static/js/cart-update.js"></script>
+    <script type="text/javascript" src="../static/js/logout.js"></script>
+    
 </body>
 
 </html>

@@ -23,7 +23,7 @@ h1 {
 }
 
 .welcome {
-
+    width: 60%;
     margin-top: 40px; 
     border-radius: 5px;
     background-color: #f2f2f2;
@@ -61,7 +61,7 @@ input[type=password] {
 }
 /* Floating column for inputs: 75% width */
 .col-75 {
-  width: 75%;
+  width: 95%;
   margin-top: 6px;
 }
 

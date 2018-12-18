@@ -17,40 +17,32 @@
             </li>
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html" >Products</a></li>
-            <li><a href="carts.html" >Carts</a></li>
+            <li><a href="carts.html" >Cart</a></li>
             <li><a  href="#" class="active">Your Profile</a></li>
             <li><a href="stock.html" >Admin Site</a></li>
-            <li><a href="./login.html" class="login">Logout</a></li>
+            <li><a onClick="logout();" class="login">Logout</a></li>
         </ul>
     </nav>
-
-     <div class="pcontainer" id="editp" style="display: none;">
-            <div class="pform">
-                <h3>Edit Profile</h3>
-                <div class="col-25"> <label >User Name</label></div>
-                <div class="col-75"><input type="text" name="" placeholder="athena-kay" ></input></div>
-                <div class="col-75"><label >Email</label></div>
-                <div class="col-75"><input type="text" name="" placeholder="athena.kay@gmail.com" ></input></div>
-                <div class="col-75"><label >Old Password</label></div>
-                <div class="col-75"> <input type="password" name="" placeholder="****" ></input></div>
-                <div class="col-75"><label >New Password</label></div>
-                <div class="col-75"> <input type="password" name="" placeholder="****" ></input></div>
-                <div class="col-75"><label >Confirm Password</label></div>
-                <div class="col-75"><input type="password"  placeholder="*******"></div>
-                <div class="col-75"> <label >Telephone</label></div>
-                <div class="col-75"><input type="text" name="" placeholder="0703 xxx xxx" ></input></div>
-                <div class="col-75"> <label >Change Profile Picture</label></div>
-                <input placeholder="choose file" type="file" />
+    <form id="passupdate">
+        <div class="pcontainer" id="editp" style="display: none;">
+                <div class="pform">
+                    <h3>Edit Password</h3>
+                    <div class="col-75"><label >Old Password</label></div>
+                    <div class="col-75"> <input id="oldpass" type="password" name="" placeholder="****" ></input></div>
+                    <div class="col-75"><label >New Password</label></div>
+                    <div class="col-75"> <input id="newpass" type="password" name="" placeholder="****" ></input></div>
+                </div>
+                <div class="absolute"><input class="update" type="submit" value="Update Password"></div>
             </div>
-            <div class="absolute"><input class="update" type="submit" value="Update Profile"></div>
         </div>
-    </div>
+    </form>
     <div class="pcontainer">
         <ul>
-            <li><a href="mycarts.html">MyCarts</a></li>
+            <li><a href="mycarts.html">MyCart</a></li>
             <li><a href="attendant-sales.html">Sales</a></li>
-            <li><a href="#" onclick="editf()" >EditProfile</a></li>
+            <li><a href="#" onclick="editf()" >EditPassword</a></li>
         </ul>
+        <p id="output"></p>
         <div class="photo">
             <img src="../static/images/athena.jpg" alt="+athena">
             <h6> athena-kay</h6>
@@ -72,6 +64,8 @@
         <p class="footer-company-name">Store Manager.inc &copy; 2018</p>
     </footer>
     <script type="text/javascript" src="../static/js/t.js"></script>
+    <script type="text/javascript" src="../static/js/password-update.js"></script>
+    <script type="text/javascript" src="../static/js/logout.js"></script>
 </body>
 
 </html>

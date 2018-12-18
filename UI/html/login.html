@@ -21,17 +21,19 @@
     </nav>
     <div class="imgcontainer">
          <img src='../static/images/smlogo.Uy' class="img-form" alt="+StoreManager" />
-         <h1>LogIn</h1>
+         <h1 style="color:#0099C4;" >LogIn</h1>
     </div>
-     <div class="welcome">
-          <div class="col-25"><label >Email Address</label></div>
-          <div class="col-75"><input type="text"  placeholder="email@example.com.."></div>
-          <div class="col-25"><label >Password</label></div>
-          <div class="col-75"><input type="password"  placeholder="*******"></div>
-          <a href="products.html"> <input type="submit" style="background-color: #0BC474" value="LogIn"></a> | <a href="./newstore.html"><input type="submit" 
-              value="CreateStore"></a></p>     
-     </div>
-     <footer class="footercentered">
+    <form onsubmit="event.preventDefault();">
+        <div class="welcome">
+            <div class="col-25"><label >Email Address</label></div>
+            <div class="col-75"><input id="email" type="text"  placeholder="email@example.com.."></div>
+            <div class="col-25"><label >Password</label></div>
+            <div class="col-75"><input id="password" type="password"  placeholder="*******"></div>
+            <p id="output"></p>
+            <a onclick="login()"> <input type="submit" style="background-color: #0BC474" value="LogIn"></a>    
+        </div>
+    </form>
+    <footer class="footercentered">
         <p class="footer-company-motto">Sit back.StoreManger will handle it.</p>
         <p class="footer-links">
             <a href="index.html">Home</a> ·
@@ -39,6 +41,6 @@
         </p>
         <p class="footer-company-name">Store Manager.inc &copy; 2018</p>
     </footer>
-    <script type="text/javascript" src="../static/js/script.js"></script>
+    <script type="text/javascript" src="../static/js/login.js"></script>
 </body>
 </html>
