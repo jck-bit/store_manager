@@ -1,0 +1,68 @@
+h1 {
+	color: #0099C4;
+	font-style: italic;
+}
+
+.status{
+    font-style: italic;
+    font-size: 0.7em;
+}
+.stock ul li {
+    color: rgb(37, 37, 99);
+    font-size: 1.3em;
+    width: 85%;
+    border-radius: 4px;
+    margin-top: 15px;
+    background-color: rgb(180, 172, 172);
+    padding: 11px 20px;
+    list-style: none;
+    float: left;
+}
+ .status h3,h4 {
+ 	padding-top: 5px;
+ 	margin: 0;
+ }
+.pcontainer {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin: 50px 350px;
+    padding: 10px 30px;
+    overflow: hidden;
+    width: 35%;
+}
+.stock input[type=submit]{
+	margin-left: 10px;
+
+}
+.btns {
+	display: inline-block !important;
+}
+.del input[type=submit]{
+	background-color: #CF5C3F !important;
+}
+/* Style The Dropdown */
+select {
+    color: black;
+    padding: 11px 20px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+select option {
+    font-size: 1.2em;
+    padding: 8px;
+}
+@media screen and (max-width: 1024px) {
+    .pcontainer {
+        width: 60%;
+        margin-left:40px;
+        padding: 4px;
+    }
+}
+
+@media screen and (max-width: 812px) {
+    .pcontainer {
+        margin-left: 40px;
+        width: 70%;
+    }
+} 

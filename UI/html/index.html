@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>StoreManager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/hf.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <img src='../static/images/smlogo.Uy' class="img-responsive" alt="+StoreManager" />
+            </li>
+            <li><a href="index.html" class="active">Home</a></li>
+           
+            <li><a href="./newstore.html" class="cstore">NewStore</a></li>
+            <li><a href="./login.html" class="login">Login</a></li>
+        </ul>
+    </nav>
+    <div class='footer-push'>
+        <div class="helper">
+            <h1>Store Manager.inc</h1>
+            <p>Store Manager is a web application that helps store owners manage sales and product inventory records. 
+                This application is meant for use in a single store.</p>
+                <p>Store Manager is a web application that helps store owners manage sales and product inventory records. 
+                        This application is meant for use in a single store.</p>
+            <div class="start">
+                <a href="newstore.html"><input type="submit" value="Get Started"></a>
+            </div>
+        </div>
+        <form  onsubmit="event.preventDefault();">
+            <div class="homelogin">
+                <div class="col-75"><label >Email Address</label></div>
+                <div class="col-75"><input id="email" type="text"  placeholder="email@example.com.."></div>
+                <div class="col-25"><label >Password</label></div>
+                <div class="col-75"><input id="password" type="password"  placeholder="*******"></div>
+                <p id="output"></p>
+                <div class="col-75">
+                    <a onclick="login()"> <input type="submit" style="background-color: #0BC474" value ="LogIn"></a>
+                </div> 
+            </div>
+        </form>
+    <footer class="footercentered">
+        <p class="footer-company-motto">Sit back.StoreManger will handle it.</p>
+        <p class="footer-links">
+            <a href="index.html">Home</a> ·
+            <a id="bpopup" onclick="b_show()">Blog</a>   
+        </p>
+        <p class="footer-company-name">Store Manager.inc &copy; 2018</p>
+    </footer>
+    <script type="text/javascript" src="../static/js/login.js"></script>
+</body>
+
+</html>

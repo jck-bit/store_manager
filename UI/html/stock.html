@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>StoreManager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/stock.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/modal.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <img src='../static/images/smlogo.Uy' class="img-responsive" alt="+StoreManager" />
+            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="stock.html" class="active">Stock</a></li>
+            <li><a href="sales.html">Sales</a></li>
+            <li><a href="addattendant.html">Add User</a></li>
+            <li><a href="products.html">Attendant Site</a></li>
+            <li><a onclick="logout();" class="login">Logout</a></li>
+        </ul>
+    </nav>
+    <div>
+        <form onsubmit="event.preventDefault();" id="newproduct"  class="modal" style="display:none">
+            <div class="col-75"><label >Product Name</label></div>
+            <div class="col-75" class="col-75"><input id="name" type="text"  placeholder="name of product.."></div>
+            <div class="col-75"><label >Product Category</label></div>
+            <div class="dropdown">
+                <select id="catdrop" name="Categories">
+                    <option >Categories</option>
+                </select>
+            </div>
+            <div class="col-75"><label >Number_Of_Items</label></div>
+            <div class="col-75"><input id="number" type="text"  placeholder="20 "></div>
+            <div class="col-75"><label >Price KSH</label></div>
+            <div class="col-75"><input id="price" type="text"  placeholder="200"></div>
+            <a onclick="addProduct();" href="#" ><input   type="submit" value="Done"><br></a>
+        </form>
+    </div>
+    <div>
+        <form id="newcat"  class="modal" style="display:none">
+            <div class="col-75"><label >Category Name</label></div>
+            <div class="col-75"><input id="catname" type="text"  placeholder="name of category.."></div>
+            <a onclick="addCategory(event);" href="#" ><input   type="submit" value="Done"><br></a>
+        </form>
+    </div>
+    <div>
+        <form  id="update" class="pcontainer" style="display:none">
+            <div class="col-75"><label >Product Name</label></div>
+            <div class="col-75"><input id="nameup" type="text"  placeholder="name of product.."></div>
+            <div class="col-75"><label >Number_Of_Items</label></div>
+            <div class="col-75"><input id="numberup" type="text"  placeholder="20 "></div>
+            <div class="col-75"><label >Price KSH</label></div>
+            <div class="col-75"><input id="priceup" type="text"  placeholder="200"></div>
+            <a ><input   type="submit" value="Update"><br></a>
+        </form>
+    </div>
+    <div class="pcontainer">
+        <h1>Available Products</h1>
+        <p id="output"></p>
+        <a href="#" onclick="adc()"><input style="background-color: #0BC474" type="submit" value="AddProduct"></a>
+        <a href="#" onclick="adc2()"><input  type="submit" value="AddCategory"></a>
+        <a href="categories.html" ><input  type="submit" value="Categories"></a>
+        <div class="stock">
+            <ul id="products"></ul>
+        </div>
+    </div>
+    <footer class="footercentered">
+        <p class="footer-company-motto">Sit back.StoreManger will handle it.</p>
+        <p class="footer-links">
+            <a href="index.html">Home</a> ·
+            <a id="bpopup" onclick="b_show()">Blog</a>   
+        </p>
+        <p class="footer-company-name">Store Manager.inc &copy; 2018</p>
+    </footer>
+    <script type="text/javascript" src="../static/js/admin-getfetch.js"></script>
+    <script type="text/javascript" src="../static/js/admin-products.js"></script>
+    <script type="text/javascript" src="../static/js/product-update.js"></script>
+    <script type="text/javascript" src="../static/js/script.js"></script>
+    <script type="text/javascript" src="../static/js/logout.js"></script>
+</body>
+</body>
+
+</html>

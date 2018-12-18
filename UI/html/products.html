@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>StoreManager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/products.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/modal.css">
+    
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <img src='../static/images/smlogo.Uy' class="img-responsive" alt="+StoreManager" />
+            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#" class="active">Products</a></li>
+            <li><a href="carts.html" >Cart</a></li>
+            <li><a  href="profile.html">Your Profile</a></li>
+            <li><a href="stock.html" class="cstore">Admin Site</a></li>
+            <li><a onClick="logout();" class="login">Logout</a></li>
+        </ul>
+    </nav>
+    <form  onsubmit="event.preventDefault();">
+        <div id="number" class="cart-modal" style="display:none;">
+            <div class="col-75"><label >Number of items</label></div>
+            <div class="col-75"><input id="cnumber" type="number"  placeholder="i.e 4"></div>
+            <p id="output2"></p>
+            <a onClick="cartAdd();" ><input type="submit" value="AddtoCart"><br></a>
+        </div>
+    </form>
+    <div class="products" id="welcome">
+        <h1 >Available Products</h1>
+        <div class="Searchbar">
+            <input type="text"  onkeyup="searchProducts()" id="myInput" placeholder="Search for products ...">
+        </div>
+        <p id="output"></p>
+        <div onClick="addProductsNum();"id="products"></div>
+        <!--<ul onClick="addProductsNum();"id="products"></ul>--> 
+    </div>
+    <footer class="footercentered">
+        <p class="footer-company-motto">Sit back.StoreManger will handle it.</p>
+        <p class="footer-links">
+            <a href="index.html">Home</a> ·
+            <a href="#">Blog</a>   
+        </p>
+        <p class="footer-company-name">Store Manager.inc &copy; 2018</p>
+    </footer>
+    <script type="text/javascript" src="../static/js/general_products.js"></script>
+    <script type="text/javascript" src="../static/js/addtocart.js"></script>
+    <script type="text/javascript" src="../static/js/logout.js"></script>
+</body>
+
+</html>

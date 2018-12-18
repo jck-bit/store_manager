@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>StoreManager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/salesadmin.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <img src='../static/images/smlogo.Uy' class="img-responsive" alt="+StoreManager" />
+            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="carts.html" class="active" >Cart</a></li>
+            <li><a  href="profile.html">Your Profile</a></li>
+            <li><a href="stock.html" class="cstore">Admin Site</a></li>
+            <li><a onClick="logout();"class="login">Logout</a></li>
+        </ul>
+    </nav>
+    <form id="cartaddr"  >
+        <div id="number" class="welcome" style="display:none;">
+            <div class="col-75"><label >Number of items</label></div>
+            <div class="col-75"><input id="cnumber" type="number"  placeholder="i.e 4"></div>
+            <p id="output2"></p>
+            <a  ><input type="submit" value="Update"><br></a>
+        </div>
+    </form>
+    <div class="welcome">
+        <a href="profile.html"><input type="submit" value="Back"></a>
+        <a href="#" onclick="cartCheckOut();"> <input type="submit" style="background-color: #0BC474" value="CheckOut"></a>  
+        <a href="#" onclick="deleteEntireCart();" class="del"><input type="submit" value="DeleteAll"></a> 
+        <p id="output"></p>
+        <h2 id="total"></h2>
+        <ul id="cart">
+            <style>
+                a{
+                    color: inherit;
+                    text-decoration: none;
+                    font-style: italic;
+                }
+            </style>
+            <script type="text/javascript" src="../static/js/cart.js"></script>
+        </ul>
+    </div>
+    <footer class="footercentered">
+        <p class="footer-company-motto">Sit back.StoreManger will handle it.</p>
+        <p class="footer-links">
+            <a href="index.html">Home</a> ·
+            <a id="bpopup" onclick="b_show()">Blog</a>   
+        </p>
+        <p class="footer-company-name">Store Manager.inc &copy; 2018</p>
+    </footer>
+    
+    <script type="text/javascript" src="../static/js/cart-update.js"></script>
+    <script type="text/javascript" src="../static/js/logout.js"></script>
+    
+</body>
+
+</html>
+
+

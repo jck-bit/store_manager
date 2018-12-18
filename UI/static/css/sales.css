@@ -1,0 +1,38 @@
+.sales-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin: 50px 150px;
+    padding: 10px 30px;
+    overflow: hidden;
+    width: 75%;
+    font-size: 1.1em;
+    color: #550527;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    color: rgb(29, 42, 49);
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: cadetblue !important;
+}
+ @media screen and (max-width: 1024px) {
+    .sales-container {
+        width: 60%;
+        margin-left:40px;
+        padding: 4px;
+    }
+}
+
+@media screen and (max-width: 812px) {
+    .sales-container {
+        margin-left: 40px;
+        width: 70%;
+    }
+} 
