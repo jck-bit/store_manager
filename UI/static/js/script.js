@@ -1,5 +1,3 @@
-
-
 function b_show() {
     alert('Hello\nOur blog does not have posts yet.');
 }
@@ -10,7 +8,6 @@ function del() {
 function sell() {
     alert('Sold!');
 }
-
 // Get the modal
 const modal = document.getElementById('newproduct');
 const mod2 = document.getElementById('details');

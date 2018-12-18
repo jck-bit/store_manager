@@ -47,7 +47,6 @@ input[type=text] {
     border-radius: 4px;
     resize: vertical;
 }
-
 input[type=password] {
     width: 100%;
     padding: 12px;
